@@ -13,6 +13,32 @@
 		4238DE5C17872CE800100DA7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE5A17872CE800100DA7 /* Credits.rtf */; };
 		4238DE5F17872CE800100DA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE5E17872CE800100DA7 /* AppDelegate.m */; };
 		4238DE6217872CE800100DA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE6017872CE800100DA7 /* MainMenu.xib */; };
+		4238DE7917872E5900100DA7 /* ClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE6D17872E5900100DA7 /* ClassView.xib */; };
+		4238DE7A17872E5900100DA7 /* ImplementationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE6F17872E5900100DA7 /* ImplementationView.xib */; };
+		4238DE7B17872E5900100DA7 /* InterfaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE7117872E5900100DA7 /* InterfaceView.xib */; };
+		4238DE7C17872E5900100DA7 /* PropertiesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE7317872E5900100DA7 /* PropertiesView.xib */; };
+		4238DE7D17872E5900100DA7 /* ProtocolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE7517872E5900100DA7 /* ProtocolsView.xib */; };
+		4238DE7E17872E5900100DA7 /* SaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE7717872E5900100DA7 /* SaveView.xib */; };
+		4238DE9917872EB800100DA7 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8D17872EB800100DA7 /* BackgroundView.m */; };
+		4238DE9A17872EB800100DA7 /* BoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8E17872EB800100DA7 /* BoxView.m */; };
+		4238DE9B17872EB800100DA7 /* ClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8F17872EB800100DA7 /* ClassModel.m */; };
+		4238DE9C17872EB800100DA7 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9017872EB800100DA7 /* ClassViewController.m */; };
+		4238DE9D17872EB800100DA7 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9117872EB800100DA7 /* DragView.m */; };
+		4238DE9E17872EB800100DA7 /* ImplementationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9217872EB800100DA7 /* ImplementationViewController.m */; };
+		4238DE9F17872EB800100DA7 /* InterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9317872EB800100DA7 /* InterfaceViewController.m */; };
+		4238DEA017872EB800100DA7 /* NSString+StringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */; };
+		4238DEA117872EB800100DA7 /* PropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9517872EB800100DA7 /* PropertiesViewController.m */; };
+		4238DEA217872EB800100DA7 /* ProtocolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9617872EB800100DA7 /* ProtocolsViewController.m */; };
+		4238DEA317872EB800100DA7 /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9717872EB800100DA7 /* SaveViewController.m */; };
+		4238DEA417872EB800100DA7 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9817872EB800100DA7 /* StepView.m */; };
+		4238DEAA17872EF300100DA7 /* dot-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA517872EF300100DA7 /* dot-green.png */; };
+		4238DEAB17872EF300100DA7 /* dot-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA617872EF300100DA7 /* dot-orange.png */; };
+		4238DEAC17872EF300100DA7 /* dot-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA717872EF300100DA7 /* dot-red.png */; };
+		4238DEAD17872EF300100DA7 /* duplicate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA817872EF300100DA7 /* duplicate.png */; };
+		4238DEAE17872EF300100DA7 /* Xcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA917872EF300100DA7 /* Xcode.png */; };
+		4238DEB217872F0B00100DA7 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEAF17872F0B00100DA7 /* Classes.plist */; };
+		4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */; };
+		4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB117872F0B00100DA7 /* Protocols.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +49,52 @@
 		4238DE5017872CE800100DA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4238DE5317872CE800100DA7 /* CodeFactory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeFactory-Info.plist"; sourceTree = "<group>"; };
 		4238DE5517872CE800100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4238DE5717872CE800100DA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4238DE5717872CE800100DA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = src/main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4238DE5917872CE800100DA7 /* CodeFactory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeFactory-Prefix.pch"; sourceTree = "<group>"; };
 		4238DE5B17872CE800100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		4238DE5D17872CE800100DA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4238DE5E17872CE800100DA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4238DE5D17872CE800100DA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE5E17872CE800100DA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4238DE6117872CE800100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4238DE6E17872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ClassView.xib; sourceTree = "<group>"; };
+		4238DE7017872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ImplementationView.xib; sourceTree = "<group>"; };
+		4238DE7217872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InterfaceView.xib; sourceTree = "<group>"; };
+		4238DE7417872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PropertiesView.xib; sourceTree = "<group>"; };
+		4238DE7617872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProtocolsView.xib; sourceTree = "<group>"; };
+		4238DE7817872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SaveView.xib; sourceTree = "<group>"; };
+		4238DE7F17872EB800100DA7 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BackgroundView.h; path = src/BackgroundView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8017872EB800100DA7 /* BoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BoxView.h; path = src/BoxView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8117872EB800100DA7 /* ClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ClassModel.h; path = src/ClassModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8217872EB800100DA7 /* ClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ClassViewController.h; path = src/ClassViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8317872EB800100DA7 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DragView.h; path = src/DragView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8417872EB800100DA7 /* ImplementationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ImplementationViewController.h; path = src/ImplementationViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8517872EB800100DA7 /* InterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = InterfaceViewController.h; path = src/InterfaceViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8617872EB800100DA7 /* NavigationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NavigationDelegate.h; path = src/NavigationDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "NSString+StringExtensions.h"; path = "src/NSString+StringExtensions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8817872EB800100DA7 /* PropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = PropertiesViewController.h; path = src/PropertiesViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8917872EB800100DA7 /* ProtocolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ProtocolsViewController.h; path = src/ProtocolsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8A17872EB800100DA7 /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SaveViewController.h; path = src/SaveViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8B17872EB800100DA7 /* StepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = StepView.h; path = src/StepView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8C17872EB800100DA7 /* TraceLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TraceLog.h; path = src/TraceLog.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8D17872EB800100DA7 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BackgroundView.m; path = src/BackgroundView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE8E17872EB800100DA7 /* BoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BoxView.m; path = src/BoxView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE8F17872EB800100DA7 /* ClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ClassModel.m; path = src/ClassModel.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9017872EB800100DA7 /* ClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ClassViewController.m; path = src/ClassViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9117872EB800100DA7 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DragView.m; path = src/DragView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9217872EB800100DA7 /* ImplementationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ImplementationViewController.m; path = src/ImplementationViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9317872EB800100DA7 /* InterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InterfaceViewController.m; path = src/InterfaceViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "NSString+StringExtensions.m"; path = "src/NSString+StringExtensions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9517872EB800100DA7 /* PropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = PropertiesViewController.m; path = src/PropertiesViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9617872EB800100DA7 /* ProtocolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ProtocolsViewController.m; path = src/ProtocolsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9717872EB800100DA7 /* SaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SaveViewController.m; path = src/SaveViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE9817872EB800100DA7 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = StepView.m; path = src/StepView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DEA517872EF300100DA7 /* dot-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot-green.png"; path = "images/dot-green.png"; sourceTree = "<group>"; };
+		4238DEA617872EF300100DA7 /* dot-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot-orange.png"; path = "images/dot-orange.png"; sourceTree = "<group>"; };
+		4238DEA717872EF300100DA7 /* dot-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot-red.png"; path = "images/dot-red.png"; sourceTree = "<group>"; };
+		4238DEA817872EF300100DA7 /* duplicate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = duplicate.png; path = images/duplicate.png; sourceTree = "<group>"; };
+		4238DEA917872EF300100DA7 /* Xcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Xcode.png; path = images/Xcode.png; sourceTree = "<group>"; };
+		4238DEAF17872F0B00100DA7 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Classes.plist; path = plists/Classes.plist; sourceTree = "<group>"; };
+		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
+		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,24 +148,88 @@
 		4238DE5117872CE800100DA7 /* CodeFactory */ = {
 			isa = PBXGroup;
 			children = (
-				4238DE5D17872CE800100DA7 /* AppDelegate.h */,
-				4238DE5E17872CE800100DA7 /* AppDelegate.m */,
-				4238DE6017872CE800100DA7 /* MainMenu.xib */,
-				4238DE5217872CE800100DA7 /* Supporting Files */,
+				4238DE6817872DBE00100DA7 /* src */,
+				4238DE6A17872DD500100DA7 /* images */,
+				4238DE6B17872DDC00100DA7 /* plists */,
+				4238DE6C17872DFD00100DA7 /* ui */,
 			);
 			path = CodeFactory;
 			sourceTree = "<group>";
 		};
-		4238DE5217872CE800100DA7 /* Supporting Files */ = {
+		4238DE6817872DBE00100DA7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4238DE5D17872CE800100DA7 /* AppDelegate.h */,
+				4238DE7F17872EB800100DA7 /* BackgroundView.h */,
+				4238DE8017872EB800100DA7 /* BoxView.h */,
+				4238DE8117872EB800100DA7 /* ClassModel.h */,
+				4238DE8217872EB800100DA7 /* ClassViewController.h */,
+				4238DE8317872EB800100DA7 /* DragView.h */,
+				4238DE8417872EB800100DA7 /* ImplementationViewController.h */,
+				4238DE8517872EB800100DA7 /* InterfaceViewController.h */,
+				4238DE8617872EB800100DA7 /* NavigationDelegate.h */,
+				4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */,
+				4238DE8817872EB800100DA7 /* PropertiesViewController.h */,
+				4238DE8917872EB800100DA7 /* ProtocolsViewController.h */,
+				4238DE8A17872EB800100DA7 /* SaveViewController.h */,
+				4238DE8B17872EB800100DA7 /* StepView.h */,
+				4238DE8C17872EB800100DA7 /* TraceLog.h */,
+				4238DE5E17872CE800100DA7 /* AppDelegate.m */,
+				4238DE8D17872EB800100DA7 /* BackgroundView.m */,
+				4238DE8E17872EB800100DA7 /* BoxView.m */,
+				4238DE8F17872EB800100DA7 /* ClassModel.m */,
+				4238DE9017872EB800100DA7 /* ClassViewController.m */,
+				4238DE9117872EB800100DA7 /* DragView.m */,
+				4238DE9217872EB800100DA7 /* ImplementationViewController.m */,
+				4238DE9317872EB800100DA7 /* InterfaceViewController.m */,
+				4238DE5717872CE800100DA7 /* main.m */,
+				4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */,
+				4238DE9517872EB800100DA7 /* PropertiesViewController.m */,
+				4238DE9617872EB800100DA7 /* ProtocolsViewController.m */,
+				4238DE9717872EB800100DA7 /* SaveViewController.m */,
+				4238DE9817872EB800100DA7 /* StepView.m */,
+				4238DE5917872CE800100DA7 /* CodeFactory-Prefix.pch */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4238DE6A17872DD500100DA7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4238DEA517872EF300100DA7 /* dot-green.png */,
+				4238DEA617872EF300100DA7 /* dot-orange.png */,
+				4238DEA717872EF300100DA7 /* dot-red.png */,
+				4238DEA817872EF300100DA7 /* duplicate.png */,
+				4238DEA917872EF300100DA7 /* Xcode.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		4238DE6B17872DDC00100DA7 /* plists */ = {
 			isa = PBXGroup;
 			children = (
 				4238DE5317872CE800100DA7 /* CodeFactory-Info.plist */,
-				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
-				4238DE5717872CE800100DA7 /* main.m */,
-				4238DE5917872CE800100DA7 /* CodeFactory-Prefix.pch */,
-				4238DE5A17872CE800100DA7 /* Credits.rtf */,
+				4238DEAF17872F0B00100DA7 /* Classes.plist */,
+				4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */,
+				4238DEB117872F0B00100DA7 /* Protocols.plist */,
 			);
-			name = "Supporting Files";
+			name = plists;
+			sourceTree = "<group>";
+		};
+		4238DE6C17872DFD00100DA7 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4238DE5A17872CE800100DA7 /* Credits.rtf */,
+				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
+				4238DE6D17872E5900100DA7 /* ClassView.xib */,
+				4238DE6F17872E5900100DA7 /* ImplementationView.xib */,
+				4238DE7117872E5900100DA7 /* InterfaceView.xib */,
+				4238DE6017872CE800100DA7 /* MainMenu.xib */,
+				4238DE7317872E5900100DA7 /* PropertiesView.xib */,
+				4238DE7517872E5900100DA7 /* ProtocolsView.xib */,
+				4238DE7717872E5900100DA7 /* SaveView.xib */,
+			);
+			name = ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +286,20 @@
 				4238DE5617872CE800100DA7 /* InfoPlist.strings in Resources */,
 				4238DE5C17872CE800100DA7 /* Credits.rtf in Resources */,
 				4238DE6217872CE800100DA7 /* MainMenu.xib in Resources */,
+				4238DE7917872E5900100DA7 /* ClassView.xib in Resources */,
+				4238DE7A17872E5900100DA7 /* ImplementationView.xib in Resources */,
+				4238DE7B17872E5900100DA7 /* InterfaceView.xib in Resources */,
+				4238DE7C17872E5900100DA7 /* PropertiesView.xib in Resources */,
+				4238DE7D17872E5900100DA7 /* ProtocolsView.xib in Resources */,
+				4238DE7E17872E5900100DA7 /* SaveView.xib in Resources */,
+				4238DEAA17872EF300100DA7 /* dot-green.png in Resources */,
+				4238DEAB17872EF300100DA7 /* dot-orange.png in Resources */,
+				4238DEAC17872EF300100DA7 /* dot-red.png in Resources */,
+				4238DEAD17872EF300100DA7 /* duplicate.png in Resources */,
+				4238DEAE17872EF300100DA7 /* Xcode.png in Resources */,
+				4238DEB217872F0B00100DA7 /* Classes.plist in Resources */,
+				4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */,
+				4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +312,18 @@
 			files = (
 				4238DE5817872CE800100DA7 /* main.m in Sources */,
 				4238DE5F17872CE800100DA7 /* AppDelegate.m in Sources */,
+				4238DE9917872EB800100DA7 /* BackgroundView.m in Sources */,
+				4238DE9A17872EB800100DA7 /* BoxView.m in Sources */,
+				4238DE9B17872EB800100DA7 /* ClassModel.m in Sources */,
+				4238DE9C17872EB800100DA7 /* ClassViewController.m in Sources */,
+				4238DE9D17872EB800100DA7 /* DragView.m in Sources */,
+				4238DE9E17872EB800100DA7 /* ImplementationViewController.m in Sources */,
+				4238DE9F17872EB800100DA7 /* InterfaceViewController.m in Sources */,
+				4238DEA017872EB800100DA7 /* NSString+StringExtensions.m in Sources */,
+				4238DEA117872EB800100DA7 /* PropertiesViewController.m in Sources */,
+				4238DEA217872EB800100DA7 /* ProtocolsViewController.m in Sources */,
+				4238DEA317872EB800100DA7 /* SaveViewController.m in Sources */,
+				4238DEA417872EB800100DA7 /* StepView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +352,54 @@
 				4238DE6117872CE800100DA7 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4238DE6D17872E5900100DA7 /* ClassView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238DE6E17872E5900100DA7 /* en */,
+			);
+			name = ClassView.xib;
+			sourceTree = "<group>";
+		};
+		4238DE6F17872E5900100DA7 /* ImplementationView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238DE7017872E5900100DA7 /* en */,
+			);
+			name = ImplementationView.xib;
+			sourceTree = "<group>";
+		};
+		4238DE7117872E5900100DA7 /* InterfaceView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238DE7217872E5900100DA7 /* en */,
+			);
+			name = InterfaceView.xib;
+			sourceTree = "<group>";
+		};
+		4238DE7317872E5900100DA7 /* PropertiesView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238DE7417872E5900100DA7 /* en */,
+			);
+			name = PropertiesView.xib;
+			sourceTree = "<group>";
+		};
+		4238DE7517872E5900100DA7 /* ProtocolsView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238DE7617872E5900100DA7 /* en */,
+			);
+			name = ProtocolsView.xib;
+			sourceTree = "<group>";
+		};
+		4238DE7717872E5900100DA7 /* SaveView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238DE7817872E5900100DA7 /* en */,
+			);
+			name = SaveView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -303,6 +507,7 @@
 				4238DE6717872CE800100DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

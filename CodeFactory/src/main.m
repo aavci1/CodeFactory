@@ -1,8 +1,8 @@
 //
 //  main.m
-//  CodeFactory
+//  Code Factory
 //
-//  Created by Abdurrahman AVCI on 7/5/13.
+//  Created by Abdurrahman AVCI on 6/30/13.
 //  Copyright (c) 2013 Abdurrahman AVCI. All rights reserved.
 //
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <string>NSCoding</string>
+    <string>NSComparisonMethods</string>
+    <string>NSConnectionDelegate</string>
+    <string>NSCopying</string>
+    <string>NSDecimalNumberBehaviors</string>
+    <string>NSErrorRecoveryAttempting</string>
+    <string>NSFastEnumeration</string>
+    <string>NSFileManagerDelegate</string>
+    <string>NSFilePresenter</string>
+    <string>NSKeyedArchiverDelegate</string>
+    <string>NSKeyedUnarchiverDelegate</string>
+    <string>NSKeyValueCoding</string>
+    <string>NSKeyValueObserving</string>
+    <string>NSLocking</string>
+    <string>NSMachPortDelegate</string>
+    <string>NSMetadataQueryDelegate</string>
+    <string>NSMutableCopying</string>
+    <string>NSNetServiceBrowserDelegate</string>
+    <string>NSNetServiceDelegate</string>
+    <string>NSObject</string>
+    <string>NSPortDelegate</string>
+    <string>NSScriptingComparisonMethods</string>
+    <string>NSScriptKeyValueCoding</string>
+    <string>NSScriptObjectSpecifiers</string>
+    <string>NSSecureCoding</string>
+    <string>NSSpellServerDelegate</string>
+    <string>NSStreamDelegate</string>
+    <string>NSURLAuthenticationChallengeSender</string>
+    <string>NSURLConnectionDataDelegate</string>
+    <string>NSURLConnectionDelegate</string>
+    <string>NSURLConnectionDelegate</string>
+    <string>NSURLHandleClient</string>
+    <string>NSURLProtocolClient</string>
+    <string>NSUserNotificationCenterDelegate</string>
+    <string>NSXMLParserDelegate</string>
+    <string>NSXPCListenerDelegate</string>
+    <string>NSXPCProxyCreating</string>
+</array>
+</plist>
