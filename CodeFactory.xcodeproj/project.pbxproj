@@ -95,6 +95,7 @@
 		4238DEAF17872F0B00100DA7 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Classes.plist; path = plists/Classes.plist; sourceTree = "<group>"; };
 		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
 		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
+		4238DEE117873B2100100DA7 /* CodeFactory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CodeFactory.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4238DE5117872CE800100DA7 /* CodeFactory */,
+				4238DEE217873B4400100DA7 /* other */,
 				4238DE4A17872CE800100DA7 /* Frameworks */,
 				4238DE4917872CE800100DA7 /* Products */,
 			);
@@ -219,8 +221,6 @@
 		4238DE6C17872DFD00100DA7 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				4238DE5A17872CE800100DA7 /* Credits.rtf */,
-				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
 				4238DE6D17872E5900100DA7 /* ClassView.xib */,
 				4238DE6F17872E5900100DA7 /* ImplementationView.xib */,
 				4238DE7117872E5900100DA7 /* InterfaceView.xib */,
@@ -230,6 +230,17 @@
 				4238DE7717872E5900100DA7 /* SaveView.xib */,
 			);
 			name = ui;
+			sourceTree = "<group>";
+		};
+		4238DEE217873B4400100DA7 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				4238DE5A17872CE800100DA7 /* Credits.rtf */,
+				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
+				4238DEE117873B2100100DA7 /* CodeFactory.entitlements */,
+			);
+			name = other;
+			path = CodeFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +443,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -459,7 +470,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -467,10 +478,13 @@
 		4238DE6617872CE800100DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CodeFactory/CodeFactory.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeFactory/CodeFactory-Prefix.pch";
 				INFOPLIST_FILE = "CodeFactory/CodeFactory-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -479,10 +493,13 @@
 		4238DE6717872CE800100DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CodeFactory/CodeFactory.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeFactory/CodeFactory-Prefix.pch";
 				INFOPLIST_FILE = "CodeFactory/CodeFactory-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
