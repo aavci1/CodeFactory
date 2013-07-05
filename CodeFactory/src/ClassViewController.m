@@ -47,10 +47,7 @@
     TraceLog();
     
     BOOL prev = NO, next = YES;
-    
-    if ([self.delegate.model.projectName isEqualToString:@""])
-        next = NO;
-    
+
     if ([self.delegate.model.className isEqualToString:@""])
         next = NO;
     else if (![self.delegate.model.className isValidIdentifier])

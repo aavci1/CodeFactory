@@ -159,6 +159,7 @@
 		4238DE6817872DBE00100DA7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4238DE5717872CE800100DA7 /* main.m */,
 				4238DE5D17872CE800100DA7 /* AppDelegate.h */,
 				4238DE7F17872EB800100DA7 /* BackgroundView.h */,
 				4238DE8017872EB800100DA7 /* BoxView.h */,
@@ -182,7 +183,6 @@
 				4238DE9117872EB800100DA7 /* DragView.m */,
 				4238DE9217872EB800100DA7 /* ImplementationViewController.m */,
 				4238DE9317872EB800100DA7 /* InterfaceViewController.m */,
-				4238DE5717872CE800100DA7 /* main.m */,
 				4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */,
 				4238DE9517872EB800100DA7 /* PropertiesViewController.m */,
 				4238DE9617872EB800100DA7 /* ProtocolsViewController.m */,
