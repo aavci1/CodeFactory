@@ -39,6 +39,8 @@
 		4238DEB217872F0B00100DA7 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEAF17872F0B00100DA7 /* Classes.plist */; };
 		4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */; };
 		4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB117872F0B00100DA7 /* Protocols.plist */; };
+		4238DF121787773100100DA7 /* icons.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 4238DF111787773100100DA7 /* icons.iconset */; };
+		4238DF141787774E00100DA7 /* icon_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DF131787774E00100DA7 /* icon_512x512.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
 		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
 		4238DEE117873B2100100DA7 /* CodeFactory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CodeFactory.entitlements; sourceTree = "<group>"; };
+		4238DF111787773100100DA7 /* icons.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icons.iconset; sourceTree = "<group>"; };
+		4238DF131787774E00100DA7 /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_512x512.png; path = ../icon_512x512.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,8 @@
 		4238DE6A17872DD500100DA7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4238DF111787773100100DA7 /* icons.iconset */,
+				4238DF131787774E00100DA7 /* icon_512x512.png */,
 				4238DEA517872EF300100DA7 /* dot-green.png */,
 				4238DEA617872EF300100DA7 /* dot-orange.png */,
 				4238DEA717872EF300100DA7 /* dot-red.png */,
@@ -311,6 +317,8 @@
 				4238DEB217872F0B00100DA7 /* Classes.plist in Resources */,
 				4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */,
 				4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */,
+				4238DF121787773100100DA7 /* icons.iconset in Resources */,
+				4238DF141787774E00100DA7 /* icon_512x512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
