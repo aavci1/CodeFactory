@@ -39,7 +39,7 @@
 		4238DEB217872F0B00100DA7 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEAF17872F0B00100DA7 /* Classes.plist */; };
 		4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */; };
 		4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB117872F0B00100DA7 /* Protocols.plist */; };
-		4288A01617878F3000BA1157 /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4288A01517878F3000BA1157 /* icons.icns */; };
+		42FA01F21788171F0062880E /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42FA01F11788171F0062880E /* icons.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +97,7 @@
 		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
 		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
 		4238DEE117873B2100100DA7 /* CodeFactory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CodeFactory.entitlements; sourceTree = "<group>"; };
-		4288A01517878F3000BA1157 /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icons.icns; path = images/icons.icns; sourceTree = "<group>"; };
+		42FA01F11788171F0062880E /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +115,7 @@
 		4238DE3F17872CE800100DA7 = {
 			isa = PBXGroup;
 			children = (
+				42FA01F11788171F0062880E /* icons.icns */,
 				4238DE5117872CE800100DA7 /* CodeFactory */,
 				4238DEE217873B4400100DA7 /* other */,
 				4238DE4A17872CE800100DA7 /* Frameworks */,
@@ -200,7 +201,6 @@
 		4238DE6A17872DD500100DA7 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				4288A01517878F3000BA1157 /* icons.icns */,
 				4238DEA517872EF300100DA7 /* dot-green.png */,
 				4238DEA617872EF300100DA7 /* dot-orange.png */,
 				4238DEA717872EF300100DA7 /* dot-red.png */,
@@ -314,7 +314,7 @@
 				4238DEB217872F0B00100DA7 /* Classes.plist in Resources */,
 				4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */,
 				4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */,
-				4288A01617878F3000BA1157 /* icons.icns in Resources */,
+				42FA01F21788171F0062880E /* icons.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
