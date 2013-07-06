@@ -175,7 +175,7 @@
 												<string key="NSIdentifier">ProtocolColumn</string>
 												<double key="NSWidth">588</double>
 												<double key="NSMinWidth">40</double>
-												<double key="NSMaxWidth">1000</double>
+												<double key="NSMaxWidth">3.4028234663852901e+38</double>
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75497536</int>
 													<int key="NSCellFlags2">2048</int>
@@ -346,7 +346,7 @@
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								<reference key="NSTarget" ref="695735254"/>
 								<string key="NSAction">_doScroller:</string>
-								<double key="NSPercent">0.95238095238095233</double>
+								<double key="NSPercent">0.96231155778894473</double>
 							</object>
 							<object class="NSScroller" id="1027808138">
 								<reference key="NSNextResponder" ref="695735254"/>
