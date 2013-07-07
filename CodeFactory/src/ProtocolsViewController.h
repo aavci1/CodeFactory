@@ -1,6 +1,6 @@
 //
 //  ProtocolsViewController.h
-//  Code Factory
+//  CodeFactory
 //
 //  Created by Abdurrahman AVCI on 7/1/13.
 //  Copyright (c) 2013 Abdurrahman AVCI. All rights reserved.

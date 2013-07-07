@@ -221,12 +221,12 @@
 		4238DE6C17872DFD00100DA7 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				4238DE6D17872E5900100DA7 /* ClassView.xib */,
-				4238DE6F17872E5900100DA7 /* ImplementationView.xib */,
-				4238DE7117872E5900100DA7 /* InterfaceView.xib */,
 				4238DE6017872CE800100DA7 /* MainMenu.xib */,
-				4238DE7317872E5900100DA7 /* PropertiesView.xib */,
+				4238DE6D17872E5900100DA7 /* ClassView.xib */,
 				4238DE7517872E5900100DA7 /* ProtocolsView.xib */,
+				4238DE7317872E5900100DA7 /* PropertiesView.xib */,
+				4238DE7117872E5900100DA7 /* InterfaceView.xib */,
+				4238DE6F17872E5900100DA7 /* ImplementationView.xib */,
 				4238DE7717872E5900100DA7 /* SaveView.xib */,
 			);
 			name = ui;
