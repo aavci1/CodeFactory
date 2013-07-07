@@ -15,7 +15,6 @@
 
 @property (strong, nonatomic) NSArray *primitiveTypes;
 @property (strong, nonatomic) NSArray *classes;
-@property (strong, nonatomic) NSArray *attributes;
 
 @end
 
@@ -30,7 +29,6 @@
     if (self) {
         _primitiveTypes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PrimitiveTypes" ofType:@"plist"]];
         _classes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]];
-        _attributes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Attributes" ofType:@"plist"]];
         _delegate = aDelegate;
     }
     
@@ -137,30 +135,17 @@
 {
     TraceLog();
     
-    if (comboBoxCell.tag == 301)
-        return self.attributes.count;
-    
-    if (comboBoxCell.tag == 302)
-        return self.primitiveTypes.count + self.classes.count;
-    
-    return 0;
+    return self.primitiveTypes.count + self.classes.count;
 }
 
 - (id)comboBoxCell:(NSComboBoxCell *)comboBoxCell objectValueForItemAtIndex:(NSInteger)index
 {
     TraceLog();
     
-    if (comboBoxCell.tag == 301)
-        return self.attributes[index];
+    if (index < self.primitiveTypes.count)
+        return self.primitiveTypes[index];
     
-    if (comboBoxCell.tag == 302) {
-        if (index < self.primitiveTypes.count)
-            return self.primitiveTypes[index];
-        
-        return [NSString stringWithFormat:@"%@*", self.classes[index - self.primitiveTypes.count]];
-    }
-
-    return nil;
+    return [NSString stringWithFormat:@"%@*", self.classes[index - self.primitiveTypes.count]];
 }
 
 // NSTableViewDelegate methods
@@ -192,7 +177,7 @@
     
     if ([tableColumn.identifier isEqualToString:@"AtomicityColumn"])
         return property.atomicity;
-
+    
     if ([tableColumn.identifier isEqualToString:@"EncapsulationColumn"])
         return property.encapsulation;
     

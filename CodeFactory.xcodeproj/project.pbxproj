@@ -117,7 +117,6 @@
 			children = (
 				42FA01F11788171F0062880E /* icons.icns */,
 				4238DE5117872CE800100DA7 /* CodeFactory */,
-				4238DEE217873B4400100DA7 /* other */,
 				4238DE4A17872CE800100DA7 /* Frameworks */,
 				4238DE4917872CE800100DA7 /* Products */,
 			);
@@ -157,6 +156,7 @@
 				4238DE6A17872DD500100DA7 /* images */,
 				4238DE6B17872DDC00100DA7 /* plists */,
 				4238DE6C17872DFD00100DA7 /* ui */,
+				4238DEE217873B4400100DA7 /* other */,
 			);
 			path = CodeFactory;
 			sourceTree = "<group>";
@@ -165,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4238DE5717872CE800100DA7 /* main.m */,
+				4238DE5917872CE800100DA7 /* CodeFactory-Prefix.pch */,
 				4238DE5D17872CE800100DA7 /* AppDelegate.h */,
 				4238DE7F17872EB800100DA7 /* BackgroundView.h */,
 				4238DE8017872EB800100DA7 /* BoxView.h */,
@@ -193,7 +194,6 @@
 				4238DE9617872EB800100DA7 /* ProtocolsViewController.m */,
 				4238DE9717872EB800100DA7 /* SaveViewController.m */,
 				4238DE9817872EB800100DA7 /* StepView.m */,
-				4238DE5917872CE800100DA7 /* CodeFactory-Prefix.pch */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -238,12 +238,11 @@
 		4238DEE217873B4400100DA7 /* other */ = {
 			isa = PBXGroup;
 			children = (
-				4238DE5A17872CE800100DA7 /* Credits.rtf */,
-				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
 				4238DEE117873B2100100DA7 /* CodeFactory.entitlements */,
+				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
+				4238DE5A17872CE800100DA7 /* Credits.rtf */,
 			);
 			name = other;
-			path = CodeFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

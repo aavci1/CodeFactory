@@ -597,7 +597,6 @@
 													<reference key="NSSupport" ref="26"/>
 													<string key="NSCellIdentifier">_NS:9</string>
 													<reference key="NSControlView" ref="651802742"/>
-													<int key="NSTag">302</int>
 													<reference key="NSBackgroundColor" ref="153690384"/>
 													<reference key="NSTextColor" ref="215419231"/>
 													<int key="NSVisibleItemCount">5</int>
