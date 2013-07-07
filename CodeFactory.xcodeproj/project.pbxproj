@@ -35,7 +35,6 @@
 		4238DEAB17872EF300100DA7 /* dot-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA617872EF300100DA7 /* dot-orange.png */; };
 		4238DEAC17872EF300100DA7 /* dot-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA717872EF300100DA7 /* dot-red.png */; };
 		4238DEAD17872EF300100DA7 /* duplicate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA817872EF300100DA7 /* duplicate.png */; };
-		4238DEAE17872EF300100DA7 /* Xcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEA917872EF300100DA7 /* Xcode.png */; };
 		4238DEB217872F0B00100DA7 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEAF17872F0B00100DA7 /* Classes.plist */; };
 		4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */; };
 		4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB117872F0B00100DA7 /* Protocols.plist */; };
@@ -92,7 +91,6 @@
 		4238DEA617872EF300100DA7 /* dot-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot-orange.png"; path = "images/dot-orange.png"; sourceTree = "<group>"; };
 		4238DEA717872EF300100DA7 /* dot-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot-red.png"; path = "images/dot-red.png"; sourceTree = "<group>"; };
 		4238DEA817872EF300100DA7 /* duplicate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = duplicate.png; path = images/duplicate.png; sourceTree = "<group>"; };
-		4238DEA917872EF300100DA7 /* Xcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Xcode.png; path = images/Xcode.png; sourceTree = "<group>"; };
 		4238DEAF17872F0B00100DA7 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Classes.plist; path = plists/Classes.plist; sourceTree = "<group>"; };
 		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
 		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				4238DEA617872EF300100DA7 /* dot-orange.png */,
 				4238DEA717872EF300100DA7 /* dot-red.png */,
 				4238DEA817872EF300100DA7 /* duplicate.png */,
-				4238DEA917872EF300100DA7 /* Xcode.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				4238DEAB17872EF300100DA7 /* dot-orange.png in Resources */,
 				4238DEAC17872EF300100DA7 /* dot-red.png in Resources */,
 				4238DEAD17872EF300100DA7 /* duplicate.png in Resources */,
-				4238DEAE17872EF300100DA7 /* Xcode.png in Resources */,
 				4238DEB217872F0B00100DA7 /* Classes.plist in Resources */,
 				4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */,
 				4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */,

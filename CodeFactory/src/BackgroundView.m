@@ -25,7 +25,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        _image = [NSImage imageNamed:@"Xcode.png"];
+        _image = [NSImage imageNamed:@"icons.icns"];
     }
     
     return self;
