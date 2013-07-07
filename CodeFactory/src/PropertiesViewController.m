@@ -71,7 +71,7 @@
     [self.tableView scrollRowToVisible:rowIndex];
     
     // begin editing
-    [self.tableView editColumn:0 row:rowIndex withEvent:nil select:YES];
+    [self.tableView editColumn:5 row:rowIndex withEvent:nil select:YES];
 }
 
 - (IBAction)addClicked:(id)sender
@@ -97,8 +97,7 @@
     property.atomicity = currentProperty.atomicity;
     property.encapsulation = currentProperty.encapsulation;
     property.type = currentProperty.type;
-    property.name = currentProperty.name;
-    
+
     // add property
     [self addProperty:property];
 }
