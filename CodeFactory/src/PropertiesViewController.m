@@ -53,12 +53,10 @@
     return @"Add properties";
 }
 
-- (IBAction)addClicked:(id)sender
+- (void)addProperty:(Property *)property
 {
-    TraceLog();
-    
-    // add new protocol
-    [self.delegate.model.properties addObject:[Property new]];
+    // add property to the list
+    [self.delegate.model.properties addObject:property];
     
     // get new row index
     NSInteger rowIndex = self.delegate.model.properties.count - 1;
@@ -76,12 +74,24 @@
     [self.tableView editColumn:0 row:rowIndex withEvent:nil select:YES];
 }
 
+- (IBAction)addClicked:(id)sender
+{
+    TraceLog();
+    
+    // add property
+    [self addProperty:[Property new]];
+}
+
 - (IBAction)duplicatePressed:(id)sender {
     TraceLog();
     
+    // get selected property
     Property *currentProperty = self.delegate.model.properties[self.tableView.selectedRow];
     
+    // create a new property
     Property *property = [Property new];
+    
+    // copy properties of the property
     property.publicity = currentProperty.publicity;
     property.memory = currentProperty.memory;
     property.atomicity = currentProperty.atomicity;
@@ -89,23 +99,8 @@
     property.type = currentProperty.type;
     property.name = currentProperty.name;
     
-    // add new protocol
-    [self.delegate.model.properties addObject:property];
-    
-    // get new row index
-    NSInteger rowIndex = self.delegate.model.properties.count - 1;
-    
-    // insert new row into the table view
-    [self.tableView beginUpdates];
-    [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:rowIndex] withAnimation:NSTableViewAnimationEffectGap];
-    [self.tableView endUpdates];
-    
-    // select the new row and make sure it is visible
-    [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:rowIndex] byExtendingSelection:NO];
-    [self.tableView scrollRowToVisible:rowIndex];
-    
-    // begin editing
-    [self.tableView editColumn:0 row:rowIndex withEvent:nil select:YES];
+    // add property
+    [self addProperty:property];
 }
 
 - (IBAction)removeClicked:(id)sender
