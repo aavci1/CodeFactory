@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+    <!-- Foundation //-->
     <string>NSCoding</string>
     <string>NSComparisonMethods</string>
     <string>NSConnectionDelegate</string>
@@ -39,5 +40,133 @@
     <string>NSXMLParserDelegate</string>
     <string>NSXPCListenerDelegate</string>
     <string>NSXPCProxyCreating</string>
+    
+    <!-- AppKit //-->
+    <string>NSAccessibility</string>
+    <string>NSAlertDelegate</string>
+    <string>NSAnimatablePropertyContainer</string>
+    <string>NSAnimationDelegate</string>
+    <string>NSApplicationDelegate</string>
+    <string>NSBrowserDelegate</string>
+    <string>NSChangeSpelling</string>
+    <string>NSCollectionViewDelegate</string>
+    <string>NSColorPickingCustom</string>
+    <string>NSColorPickingDefault</string>
+    <string>NSComboBoxCellDataSource</string>
+    <string>NSComboBoxDataSource</string>
+    <string>NSComboBoxDelegate</string>
+    <string>NSControlTextEditingDelegate</string>
+    <string>NSDatePickerCellDelegate</string>
+    <string>NSDictionaryControllerKeyValuePair</string>
+    <string>NSDockTilePlugIn</string>
+    <string>NSDraggingDestination</string>
+    <string>NSDraggingInfo</string>
+    <string>NSDraggingSource</string>
+    <string>NSDrawerDelegate</string>
+    <string>NSEditor</string>
+    <string>NSEditorRegistration</string>
+    <string>NSFontPanelValidation</string>
+    <string>NSGlyphStorage</string>
+    <string>NSIgnoreMisspelledWords</string>
+    <string>NSImageDelegate</string>
+    <string>NSKeyValueBindingCreation</string>
+    <string>NSLayoutManagerDelegate</string>
+    <string>NSMatrixDelegate</string>
+    <string>NSMenuDelegate</string>
+    <string>NSMenuValidation</string>
+    <string>NSNibAwaking</string>
+    <string>NSOpenSavePanelDelegate</string>
+    <string>NSOutlineViewDataSource</string>
+    <string>NSOutlineViewDelegate</string>
+    <string>NSPageControllerDelegate</string>
+    <string>NSPasteboardItemDataProvider</string>
+    <string>NSPasteboardReading</string>
+    <string>NSPasteboardWriting</string>
+    <string>NSPathCellDelegate</string>
+    <string>NSPathControlDelegate</string>
+    <string>NSPlaceholders</string>
+    <string>NSPopoverDelegate</string>
+    <string>NSPrintPanelAccessorizing</string>
+    <string>NSRuleEditorDelegate</string>
+    <string>NSServicesRequests</string>
+    <string>NSSharingServiceDelegate</string>
+    <string>NSSharingServicePickerDelegate</string>
+    <string>NSSoundDelegate</string>
+    <string>NSSpeechRecognizerDelegate</string>
+    <string>NSSpeechSynthesizerDelegate</string>
+    <string>NSSplitViewDelegate</string>
+    <string>NSTableViewDataSource</string>
+    <string>NSTableViewDelegate</string>
+    <string>NSTabViewDelegate</string>
+    <string>NSTextAttachmentCell</string>
+    <string>NSTextDelegate</string>
+    <string>NSTextFieldDelegate</string>
+    <string>NSTextFinderBarContainer</string>
+    <string>NSTextFinderClient</string>
+    <string>NSTextInput</string>
+    <string>NSTextInputClient</string>
+    <string>NSTextLayoutOrientationProvider</string>
+    <string>NSTextViewDelegate</string>
+    <string>NSTokenFieldCellDelegate</string>
+    <string>NSTokenFieldDelegate</string>
+    <string>NSToolbarDelegate</string>
+    <string>NSToolbarItemValidation</string>
+    <string>NSToolTipOwner</string>
+    <string>NSUserInterfaceItemIdentification</string>
+    <string>NSUserInterfaceItemSearchDataSource</string>
+    <string>NSUserInterfaceItemSearching</string>
+    <string>NSUserInterfaceValidations</string>
+    <string>NSValidatedUserInterfaceItem</string>
+    <string>NSWindowDelegate</string>
+    <string>NSWindowRestoration</string>
+    <string>NSWindowScripting</string>
+    
+    <!-- UIKit //-->
+    <string>UIAccelerometerDelegate</string>
+    <string>UIAccessibility</string>
+    <string>UIAccessibilityAction</string>
+    <string>UIAccessibilityContainer</string>
+    <string>UIAccessibilityFocus</string>
+    <string>UIActionSheetDelegate</string>
+    <string>UIActivityItemSource</string>
+    <string>UIAlertViewDelegate</string>
+    <string>UIAppearance</string>
+    <string>UIAppearanceContainer</string>
+    <string>UIApplicationDelegate</string>
+    <string>UICollectionViewDataSource</string>
+    <string>UICollectionViewDelegate</string>
+    <string>UICollectionViewDelegateFlowLayout</string>
+    <string>UIDataSourceModelAssociation</string>
+    <string>UIDocumentInteractionControllerDelegate</string>
+    <string>UIGestureRecognizerDelegate</string>
+    <string>UIImagePickerControllerDelegate</string>
+    <string>UIKeyInput</string>
+    <string>UINavigationBarDelegate</string>
+    <string>UINavigationControllerDelegate</string>
+    <string>UIPageViewControllerDataSource</string>
+    <string>UIPageViewControllerDelegate</string>
+    <string>UIPickerViewAccessibilityDelegate</string>
+    <string>UIPickerViewDataSource</string>
+    <string>UIPickerViewDelegate</string>
+    <string>UIPopoverControllerDelegate</string>
+    <string>UIPrintInteractionControllerDelegate</string>
+    <string>UIResponderStandardEditActions</string>
+    <string>UIScrollViewDelegate</string>
+    <string>UISearchBarDelegate</string>
+    <string>UISearchDisplayDelegate</string>
+    <string>UISplitViewControllerDelegate</string>
+    <string>UITabBarControllerDelegate</string>
+    <string>UITabBarDelegate</string>
+    <string>UITableViewDataSource</string>
+    <string>UITableViewDelegate</string>
+    <string>UITextFieldDelegate</string>
+    <string>UITextInput</string>
+    <string>UITextInputDelegate</string>
+    <string>UITextInputTokenizer</string>
+    <string>UITextInputTraits</string>
+    <string>UITextViewDelegate</string>
+    <string>UIVideoEditorControllerDelegate</string>
+    <string>UIViewControllerRestoration</string>
+    <string>UIWebViewDelegate</string>
 </array>
 </plist>
