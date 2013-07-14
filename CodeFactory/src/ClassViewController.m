@@ -54,13 +54,13 @@
         message = @"Class name can not be empty.";
         classNameValid = NO;
     } else if (![self.model.className isValidIdentifier]) {
-        message = @"Class name is not a valid identifier.";
+        message = [NSString stringWithFormat:@"\'%@\' is not a valid class name.", self.model.className];
         classNameValid = NO;
     } else if ([self.model.superName isEqualToString:@""]) {
         message = @"Super class name can not be empty.";
         superNameValid = NO;
     } else if (![self.model.superName isValidIdentifier]) {
-        message = @"Super class name is not a valid identifier.";
+        message = [NSString stringWithFormat:@"\'%@\' is not a valid class name.", self.model.superName];
         superNameValid = NO;
     }
     
