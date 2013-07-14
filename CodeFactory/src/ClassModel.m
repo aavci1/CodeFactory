@@ -8,33 +8,18 @@
 
 #import "ClassModel.h"
 
+#import "NSArray+Join.h"
 #import "NSString+StringExtensions.h"
-#include "TraceLog.h"
+#import "TraceLog.h"
 
-@implementation Property
 
--(id)init
-{
-    TraceLog();
-    
-    self = [super init];
-    
-    if (self)
-    {
-        _publicity = YES;
-        _memory = @"default";
-        _atomicity = @"default";
-        _encapsulation = @"default";
-        _type = @"NSString*";
-        _name = @"";
-    }
-    
-    return self;
-}
+@interface Property ()
+
+@property (strong, nonatomic) NSArray *primitiveTypes;
 
 @end
 
-@implementation Method
+@implementation Property
 
 - (id)init
 {
@@ -44,10 +29,14 @@
     
     if (self)
     {
-        _type = InstanceMethod;
-        _returnType = @"";
+        _primitiveTypes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PrimitiveTypes" ofType:@"plist"]];
+
+        _publicity = YES;
+        _memory = @"default";
+        _atomicity = @"default";
+        _encapsulation = @"default";
+        _type = @"NSString";
         _name = @"";
-        _parameters = @"";
     }
     
     return self;
@@ -55,18 +44,36 @@
 
 - (NSString *)string
 {
-    NSMutableString *result = [NSMutableString new];
+    TraceLog();
     
-    if (self.type == ClassMethod)
-        [result appendString:@"+"];
+    NSMutableString *source = [NSMutableString new];
+    
+    if ([[self.name trimmed] isEqualToString:@""])
+        return source;
+    
+    [source appendString:@"@property"];
+
+    NSMutableArray *attributes = [NSMutableArray new];
+    
+    if (![self.memory isEqualToString:@"default"])
+        [attributes addObject:self.memory];
+    
+    if (![self.atomicity isEqualToString:@"default"])
+        [attributes addObject:self.atomicity];
+    
+    if (![self.encapsulation isEqualToString:@"default"])
+        [attributes addObject:self.encapsulation];
+    
+    [source appendString:[attributes joinWithPrefix:@" (" postfix:@")"]];
+    
+    if ([self.primitiveTypes indexOfObject:self.type] != NSNotFound)
+        [source appendFormat:@" %@ ", self.type];
     else
-        [result appendString:@"-"];
+        [source appendFormat:@" %@ *", self.type];
     
-    [result appendFormat:@" (%@)%@", self.returnType, self.name];
+    [source appendFormat:@"%@;\n", self.name];
     
-    [result appendString: self.parameters];
-    
-    return result;
+    return source;
 }
 
 @end
@@ -116,23 +123,6 @@
     return source;
 }
 
-- (NSString *)join:(NSArray *)strings withPrefix:(NSString *)prefix andPostfix:(NSString *)postfix
-{
-    NSMutableString *string = [NSMutableString new];
-    
-    if (strings.count == 0)
-        return string;
-    
-    [string appendFormat:@"%@%@", prefix, strings[0]];
-    
-    for (int i = 1; i < strings.count; ++i)
-        [string appendFormat:@", %@", strings[i]];
-    
-    [string appendString:postfix];
-    
-    return string;
-}
-
 - (NSString *)propertiesWithPublicity:(BOOL)publicity
 {
     TraceLog();
@@ -148,20 +138,7 @@
         
         propertyCount++;
         
-        [source appendString:@"@property"];
-        
-        NSMutableArray *attributes = [NSMutableArray arrayWithCapacity:3];
-        
-        if (![property.memory isEqualToString:@"default"])
-            [attributes addObject:property.memory];
-        
-        if (![property.atomicity isEqualToString:@"default"])
-            [attributes addObject:property.atomicity];
-        
-        if (![property.encapsulation isEqualToString:@"default"])
-            [attributes addObject:property.encapsulation];
-        
-        [source appendFormat:@"%@ %@ %@;\n", [self join:attributes withPrefix:@" (" andPostfix:@")"], property.type, property.name];
+        [source appendString:[property string]];
     }
     
     if (propertyCount)
@@ -192,15 +169,14 @@
         if (![[protocol trimmed] isEqualToString:@""])
             [protocols addObject:[protocol trimmed]];
     
-    [source appendString:[self join:protocols withPrefix:@" <" andPostfix:@">"]];
+    [source appendString:[protocols joinWithPrefix:@" <" postfix:@">"]];
     
     [source appendString:@"\n\n"];
 
+    // properties
     [source appendString:[self propertiesWithPublicity:YES]];
-
-    for (Method *method in self.methods)
-         [source appendFormat:@"%@;\n", [method string]];
     
+    // end
     [source appendString:@"@end\n"];
     
     return source;
@@ -212,21 +188,25 @@
     
     NSMutableString *source = [NSMutableString stringWithCapacity:0];
     
+    // header
     [source appendString:[self header:@"m"]];
     
+    // imports
     [source appendFormat:@"#import \"%@.h\"\n\n", self.className];
     
+    // interface
     [source appendFormat:@"@interface %@ ()\n\n", self.className];
     
+    // private properties
     [source appendString:[self propertiesWithPublicity:NO]];
     
+    // end
     [source appendString:@"@end\n\n"];
     
+    // implementation
     [source appendFormat:@"@implementation %@\n\n", self.className];
     
-    for (Method *method in self.methods)
-        [source appendFormat:@"%@\n{\n\n}\n\n", [method string]];
-    
+    // end
     [source appendString:@"@end\n"];
     
     return source;

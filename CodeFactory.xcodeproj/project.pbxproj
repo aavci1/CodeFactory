@@ -38,6 +38,7 @@
 		4238DEB217872F0B00100DA7 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEAF17872F0B00100DA7 /* Classes.plist */; };
 		4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */; };
 		4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB117872F0B00100DA7 /* Protocols.plist */; };
+		42E5CDEC179227E200870FC2 /* NSArray+Join.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E5CDEB179227E200870FC2 /* NSArray+Join.m */; };
 		42FA01F21788171F0062880E /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42FA01F11788171F0062880E /* icons.icns */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
 		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
 		4238DEE117873B2100100DA7 /* CodeFactory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CodeFactory.entitlements; sourceTree = "<group>"; };
+		42E5CDEA179227E200870FC2 /* NSArray+Join.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Join.h"; path = "src/NSArray+Join.h"; sourceTree = "<group>"; };
+		42E5CDEB179227E200870FC2 /* NSArray+Join.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Join.m"; path = "src/NSArray+Join.m"; sourceTree = "<group>"; };
 		42FA01F11788171F0062880E /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +176,7 @@
 				4238DE8417872EB800100DA7 /* ImplementationViewController.h */,
 				4238DE8517872EB800100DA7 /* InterfaceViewController.h */,
 				4238DE8617872EB800100DA7 /* NavigationDelegate.h */,
+				42E5CDEA179227E200870FC2 /* NSArray+Join.h */,
 				4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */,
 				4238DE8817872EB800100DA7 /* PropertiesViewController.h */,
 				4238DE8917872EB800100DA7 /* ProtocolsViewController.h */,
@@ -187,6 +191,7 @@
 				4238DE9117872EB800100DA7 /* DragView.m */,
 				4238DE9217872EB800100DA7 /* ImplementationViewController.m */,
 				4238DE9317872EB800100DA7 /* InterfaceViewController.m */,
+				42E5CDEB179227E200870FC2 /* NSArray+Join.m */,
 				4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */,
 				4238DE9517872EB800100DA7 /* PropertiesViewController.m */,
 				4238DE9617872EB800100DA7 /* ProtocolsViewController.m */,
@@ -334,6 +339,7 @@
 				4238DEA217872EB800100DA7 /* ProtocolsViewController.m in Sources */,
 				4238DEA317872EB800100DA7 /* SaveViewController.m in Sources */,
 				4238DEA417872EB800100DA7 /* StepView.m in Sources */,
+				42E5CDEC179227E200870FC2 /* NSArray+Join.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

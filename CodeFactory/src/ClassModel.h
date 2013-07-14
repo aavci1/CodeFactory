@@ -19,20 +19,6 @@
 
 @end
 
-enum MethodType {
-    ClassMethod = 0,
-    InstanceMethod = 1
-};
-
-@interface Method : NSObject
-
-@property (nonatomic) enum MethodType type;
-@property (strong, nonatomic) NSString *returnType;
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *parameters;
-
-@end
-
 @interface ClassModel : NSObject
 
 @property (strong, nonatomic) NSString *projectName;

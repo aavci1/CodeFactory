@@ -139,7 +139,7 @@
     if (index < self.primitiveTypes.count)
         return self.primitiveTypes[index];
     
-    return [NSString stringWithFormat:@"%@*", self.classes[index - self.primitiveTypes.count]];
+    return self.classes[index - self.primitiveTypes.count];
 }
 
 // NSTableViewDelegate methods
