@@ -45,21 +45,31 @@
 - (void)validate
 {
     TraceLog();
+  
+    NSString *message = @"";
+    BOOL classNameValid = YES, superNameValid = YES;
     
-    BOOL prev = NO, next = YES;
-
-    if ([self.delegate.model.className isEqualToString:@""])
-        next = NO;
-    else if (![self.delegate.model.className isValidIdentifier])
-        next = NO;
+    if ([self.delegate.model.className isEqualToString:@""]) {
+        message = @"Class name can not be empty.";
+        classNameValid = NO;
+    } else if (![self.delegate.model.className isValidIdentifier]) {
+        message = @"Class name is not a valid identifier.";
+        classNameValid = NO;
+    } else if ([self.delegate.model.superName isEqualToString:@""]) {
+        message = @"Super class name can not be empty.";
+        superNameValid = NO;
+    } else if (![self.delegate.model.superName isValidIdentifier]) {
+        message = @"Super class name is not a valid identifier.";
+        superNameValid = NO;
+    }
     
-    if ([self.delegate.model.superName isEqualToString:@""])
-        next = NO;
-    else if (![self.delegate.model.superName isValidIdentifier])
-        next = NO;
+    [self.classErrorImage setHidden:classNameValid];
+    [self.superErrorImage setHidden:superNameValid];
     
-    [self.delegate canDoPrev:prev];
-    [self.delegate canDoNext:next];
+    [self.errorMessage setStringValue:message];
+    
+    [self.delegate canDoPrev:NO];
+    [self.delegate canDoNext:(classNameValid && superNameValid)];
 }
 
 - (NSString *)title

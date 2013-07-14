@@ -28,5 +28,8 @@
 @property (weak) IBOutlet NSTextField *projectField;
 @property (weak) IBOutlet NSTextField *classField;
 @property (weak) IBOutlet NSComboBox *superCombo;
+@property (weak) IBOutlet NSImageView *classErrorImage;
+@property (weak) IBOutlet NSImageView *superErrorImage;
+@property (weak) IBOutlet NSTextField *errorMessage;
 
 @end
