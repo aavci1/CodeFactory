@@ -17,7 +17,7 @@
 
 @implementation SourceViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate extension:(NSString *)anExtension
 {
     TraceLog();
     
@@ -25,6 +25,7 @@
     
     if (self) {
         _delegate = aDelegate;
+        _extension = anExtension;
     }
     
     return self;
@@ -39,7 +40,10 @@
 {
     TraceLog();
     
-    self.textView.string = [self.delegate.model interface];
+    if ([self.extension isEqualToString:@"h"])
+        self.textView.string = [self.delegate.model interface];
+    else
+        self.textView.string = [self.delegate.model implementation];
     
     [self.delegate canDoPrev:YES];
     [self.delegate canDoNext:YES];
@@ -47,12 +51,15 @@
 
 - (NSString *)title
 {
-    return @"Interface";
+    if ([self.extension isEqualToString:@"h"])
+        return @"Header";
+    
+    return @"Implementation";
 }
 
 - (NSString *)description
 {
-    return @"Review and edit generated interface as you wish.";
+    return @"Review generated source code. Any changes you make here will be preserved when you save.";
 }
 
 - (NSString *)string

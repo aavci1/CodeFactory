@@ -14,9 +14,10 @@
 
 // properties
 @property (weak, nonatomic) id<NavigationDelegate> delegate;
+@property (strong, nonatomic) NSString *extension;
 
 // initializers
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate extension:(NSString *)anExtension;
 
 // methods
 - (void)validate;
