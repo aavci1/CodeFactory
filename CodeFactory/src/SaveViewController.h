@@ -8,20 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "NavigationDelegate.h"
-
+@class Model;
 @class DragView;
 
 @interface SaveViewController : NSViewController
 
-// properties
-@property (weak, nonatomic) id<NavigationDelegate> delegate;
-
 // initializers
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel;
 
 // methods
-- (void)validate;
+- (BOOL)isValid;
 
 - (NSString *)title;
 - (NSString *)description;

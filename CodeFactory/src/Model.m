@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Abdurrahman AVCI. All rights reserved.
 //
 
-#import "ClassModel.h"
+#import "Model.h"
 
 #import "NSArray+Join.h"
 #import "NSString+StringExtensions.h"
@@ -78,7 +78,7 @@
 
 @end
 
-@implementation ClassModel
+@implementation Model
 
 - (id)init
 {

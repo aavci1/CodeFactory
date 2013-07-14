@@ -8,23 +8,25 @@
 
 #import "SourceViewController.h"
 
-#import "ClassModel.h"
+#import "Model.h"
 #import "TraceLog.h"
 
 @interface SourceViewController ()
+
+@property (strong, nonatomic) Model *model;
 
 @end
 
 @implementation SourceViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate extension:(NSString *)anExtension
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel extension:(NSString *)anExtension
 {
     TraceLog();
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
-        _delegate = aDelegate;
+        _model = aModel;
         _extension = anExtension;
     }
     
@@ -36,17 +38,16 @@
     [self.textView setFont:[NSFont fontWithName:@"Menlo Regular" size:[NSFont smallSystemFontSize]]];
 }
 
-- (void)validate
+- (BOOL)isValid
 {
     TraceLog();
     
     if ([self.extension isEqualToString:@"h"])
-        self.textView.string = [self.delegate.model interface];
+        self.textView.string = [self.model interface];
     else
-        self.textView.string = [self.delegate.model implementation];
+        self.textView.string = [self.model implementation];
     
-    [self.delegate canDoPrev:YES];
-    [self.delegate canDoNext:YES];
+    return YES;
 }
 
 - (NSString *)title

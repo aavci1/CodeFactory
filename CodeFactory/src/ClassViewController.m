@@ -8,27 +8,28 @@
 
 #import "ClassViewController.h"
 
-#import "ClassModel.h"
+#import "Model.h"
 #import "TraceLog.h"
 #import "NSString+StringExtensions.h"
 
 @interface ClassViewController ()
 
+@property (strong, nonatomic) Model *model;
 @property (strong, nonatomic) NSArray *classes;
 
 @end
 
 @implementation ClassViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel
 {
     TraceLog();
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+        _model = aModel;
         _classes = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]];
-        _delegate = aDelegate;
     }
     
     return self;
@@ -42,23 +43,23 @@
     [self.superCombo selectItemAtIndex:[self.classes indexOfObject:@"NSObject"]];
 }
 
-- (void)validate
+- (BOOL)isValid
 {
     TraceLog();
-  
+    
     NSString *message = @"";
     BOOL classNameValid = YES, superNameValid = YES;
     
-    if ([self.delegate.model.className isEqualToString:@""]) {
+    if ([self.model.className isEqualToString:@""]) {
         message = @"Class name can not be empty.";
         classNameValid = NO;
-    } else if (![self.delegate.model.className isValidIdentifier]) {
+    } else if (![self.model.className isValidIdentifier]) {
         message = @"Class name is not a valid identifier.";
         classNameValid = NO;
-    } else if ([self.delegate.model.superName isEqualToString:@""]) {
+    } else if ([self.model.superName isEqualToString:@""]) {
         message = @"Super class name can not be empty.";
         superNameValid = NO;
-    } else if (![self.delegate.model.superName isValidIdentifier]) {
+    } else if (![self.model.superName isValidIdentifier]) {
         message = @"Super class name is not a valid identifier.";
         superNameValid = NO;
     }
@@ -68,8 +69,7 @@
     
     [self.errorMessage setStringValue:message];
     
-    [self.delegate canDoPrev:NO];
-    [self.delegate canDoNext:(classNameValid && superNameValid)];
+    return classNameValid && superNameValid;
 }
 
 - (NSString *)title
@@ -87,11 +87,9 @@
 {
     TraceLog();
     
-    self.delegate.model.projectName = [self.projectField.stringValue trimmed];
-    self.delegate.model.className = [self.classField.stringValue trimmed];
-    self.delegate.model.superName = [self.superCombo.stringValue trimmed];
-    
-    [self validate];
+    self.model.projectName = [self.projectField.stringValue trimmed];
+    self.model.className = [self.classField.stringValue trimmed];
+    self.model.superName = [self.superCombo.stringValue trimmed];
 }
 
 // NSComboBoxDataSource
@@ -114,11 +112,9 @@
 {
     TraceLog();
     
-    self.delegate.model.projectName = [self.projectField.stringValue trimmed];
-    self.delegate.model.className = [self.classField.stringValue trimmed];
-    self.delegate.model.superName = [self.classes[self.superCombo.indexOfSelectedItem] trimmed];
-    
-    [self validate];
+    self.model.projectName = [self.projectField.stringValue trimmed];
+    self.model.className = [self.classField.stringValue trimmed];
+    self.model.superName = [self.classes[self.superCombo.indexOfSelectedItem] trimmed];
 }
 
 @end

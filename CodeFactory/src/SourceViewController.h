@@ -8,19 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "NavigationDelegate.h"
+@class Model;
 
 @interface SourceViewController : NSViewController
 
 // properties
-@property (weak, nonatomic) id<NavigationDelegate> delegate;
 @property (strong, nonatomic) NSString *extension;
 
 // initializers
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate extension:(NSString *)anExtension;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel extension:(NSString *)anExtension;
 
 // methods
-- (void)validate;
+- (BOOL)isValid;
 
 - (NSString *)title;
 - (NSString *)description;

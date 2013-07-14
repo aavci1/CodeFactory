@@ -19,7 +19,7 @@
 
 @end
 
-@interface ClassModel : NSObject
+@interface Model : NSObject
 
 @property (strong, nonatomic) NSString *projectName;
 @property (strong, nonatomic) NSString *className;

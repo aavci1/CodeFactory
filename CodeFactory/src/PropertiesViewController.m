@@ -8,11 +8,12 @@
 
 #import "PropertiesViewController.h"
 
-#import "ClassModel.h"
+#import "Model.h"
 #import "TraceLog.h"
 
 @interface PropertiesViewController ()
 
+@property (strong, nonatomic) Model *model;
 @property (strong, nonatomic) NSArray *primitiveTypes;
 @property (strong, nonatomic) NSArray *classes;
 
@@ -20,27 +21,26 @@
 
 @implementation PropertiesViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel
 {
     TraceLog();
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+        _model = aModel;
         _primitiveTypes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PrimitiveTypes" ofType:@"plist"]];
         _classes = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]];
-        _delegate = aDelegate;
     }
     
     return self;
 }
 
-- (void)validate
+- (BOOL)isValid
 {
     TraceLog();
     
-    [self.delegate canDoPrev:YES];
-    [self.delegate canDoNext:YES];
+    return YES;
 }
 
 - (NSString *)title
@@ -56,10 +56,10 @@
 - (void)addProperty:(Property *)property
 {
     // add property to the list
-    [self.delegate.model.properties addObject:property];
+    [self.model.properties addObject:property];
     
     // get new row index
-    NSInteger rowIndex = self.delegate.model.properties.count - 1;
+    NSInteger rowIndex = self.model.properties.count - 1;
     
     // insert new row into the table view
     [self.tableView beginUpdates];
@@ -86,7 +86,7 @@
     TraceLog();
     
     // get selected property
-    Property *currentProperty = self.delegate.model.properties[self.tableView.selectedRow];
+    Property *currentProperty = self.model.properties[self.tableView.selectedRow];
     
     // create a new property
     Property *property = [Property new];
@@ -114,11 +114,11 @@
     [self.tableView endUpdates];
     
     // remove from model
-    [self.delegate.model.properties removeObjectAtIndex:rowIndex];
+    [self.model.properties removeObjectAtIndex:rowIndex];
 
     // calculate row index to select
-    if (rowIndex == self.delegate.model.properties.count)
-        rowIndex = self.delegate.model.properties.count - 1;
+    if (rowIndex == self.model.properties.count)
+        rowIndex = self.model.properties.count - 1;
     
     // select row
     [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:rowIndex] byExtendingSelection:NO];
@@ -156,12 +156,12 @@
 {
     TraceLog();
     
-    return self.delegate.model.properties.count;
+    return self.model.properties.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    Property *property = self.delegate.model.properties[row];
+    Property *property = self.model.properties[row];
     
     if ([tableColumn.identifier isEqualToString:@"PublicityColumn"])
         return property.publicity ? @YES : @NO;
@@ -186,7 +186,7 @@
 
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    Property *property = self.delegate.model.properties[row];
+    Property *property = self.model.properties[row];
     
     if ([tableColumn.identifier isEqualToString:@"PublicityColumn"])
         property.publicity = [object isEqualTo:@YES] ? YES : NO;

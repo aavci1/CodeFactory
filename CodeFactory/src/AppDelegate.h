@@ -9,16 +9,15 @@
 #import <Cocoa/Cocoa.h>
 
 #import "BoxView.h"
-#import "NavigationDelegate.h"
 #import "StepView.h"
 
-@interface AppDelegate : NSObject <NavigationDelegate, NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 // outlets
+@property (assign) IBOutlet NSWindow *window;
+
+@property (weak) IBOutlet BoxView *mainView;
 @property (weak) IBOutlet StepView *stepView;
-@property (weak) IBOutlet BoxView *rightBox;
 
 @property (weak) IBOutlet NSButton *btnPrev;
 @property (weak) IBOutlet NSButton *btnNext;

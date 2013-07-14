@@ -8,37 +8,37 @@
 
 #import "ProtocolsViewController.h"
 
-#import "ClassModel.h"
+#import "Model.h"
 #import "TraceLog.h"
 
 @interface ProtocolsViewController ()
 
+@property (strong, nonatomic) Model *model;
 @property (strong, nonatomic) NSArray *protocols;
 
 @end
 
 @implementation ProtocolsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel
 {
     TraceLog();
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
+        _model = aModel;
         _protocols = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Protocols" ofType:@"plist"]];
-        _delegate = aDelegate;
     }
     
     return self;
 }
 
-- (void)validate
+- (BOOL)isValid
 {
     TraceLog();
     
-    [self.delegate canDoPrev:YES];
-    [self.delegate canDoNext:YES];
+    return YES;
 }
 
 - (NSString *)title
@@ -56,10 +56,10 @@
     TraceLog();
     
     // add new protocol
-    [self.delegate.model.protocols addObject:@""];
+    [self.model.protocols addObject:@""];
     
     // get new row index
-    NSInteger rowIndex = self.delegate.model.protocols.count - 1;
+    NSInteger rowIndex = self.model.protocols.count - 1;
     
     // insert new row into the table view
     [self.tableView beginUpdates];
@@ -86,11 +86,11 @@
     [self.tableView endUpdates];
     
     // remove from model
-    [self.delegate.model.protocols removeObjectAtIndex:rowIndex];
+    [self.model.protocols removeObjectAtIndex:rowIndex];
     
     // calculate row index to select
-    if (rowIndex == self.delegate.model.protocols.count)
-        rowIndex = self.delegate.model.protocols.count - 1;
+    if (rowIndex == self.model.protocols.count)
+        rowIndex = self.model.protocols.count - 1;
     
     // select row
     [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:rowIndex] byExtendingSelection:NO];
@@ -124,17 +124,17 @@
 {
     TraceLog();
     
-    return self.delegate.model.protocols.count;
+    return self.model.protocols.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    return self.delegate.model.protocols[row];
+    return self.model.protocols[row];
 }
 
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    self.delegate.model.protocols[row] = object;
+    self.model.protocols[row] = object;
 }
 
 @end

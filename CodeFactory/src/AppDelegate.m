@@ -8,19 +8,18 @@
 
 #import "AppDelegate.h"
 
+#import "DragView.h"
+#import "Model.h"
 #import "ClassViewController.h"
 #import "ProtocolsViewController.h"
 #import "PropertiesViewController.h"
 #import "SourceViewController.h"
 #import "SaveViewController.h"
-
-#import "ClassModel.h"
-#import "DragView.h"
 #import "TraceLog.h"
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) ClassModel *classModel;
+@property (strong, nonatomic) Model *model;
 
 @property (strong, nonatomic) NSArray *viewControllers;
 @property (nonatomic) NSUInteger oldIndex;
@@ -35,16 +34,16 @@
     TraceLog();
     
     // create class model
-    self.classModel = [[ClassModel alloc] init];
+    self.model = [Model new];
     
     // create view controllers
     self.viewControllers = @[
-                             [[ClassViewController alloc] initWithNibName:@"ClassView" bundle:[NSBundle mainBundle] delegate:self],
-                             [[ProtocolsViewController alloc] initWithNibName:@"ProtocolsView" bundle:[NSBundle mainBundle] delegate:self],
-                             [[PropertiesViewController alloc] initWithNibName:@"PropertiesView" bundle:[NSBundle mainBundle] delegate:self],
-                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] delegate:self extension:@"h"],
-                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] delegate:self extension:@"m"],
-                             [[SaveViewController alloc] initWithNibName:@"SaveView" bundle:[NSBundle mainBundle] delegate:self]
+                             [[ClassViewController alloc] initWithNibName:@"ClassView" bundle:[NSBundle mainBundle] model:self.model],
+                             [[ProtocolsViewController alloc] initWithNibName:@"ProtocolsView" bundle:[NSBundle mainBundle] model:self.model],
+                             [[PropertiesViewController alloc] initWithNibName:@"PropertiesView" bundle:[NSBundle mainBundle] model:self.model],
+                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] model:self.model extension:@"h"],
+                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] model:self.model extension:@"m"],
+                             [[SaveViewController alloc] initWithNibName:@"SaveView" bundle:[NSBundle mainBundle] model:self.model]
                              ];
     
     // create steps
@@ -56,7 +55,7 @@
     self.newIndex = 0;
 
     // show first view
-    [self.rightBox addSubview:[self.viewControllers[0] view]];
+    [self.mainView addSubview:[self.viewControllers[0] view]];
     
     [self viewChanged];
 }
@@ -76,7 +75,7 @@
         self.oldIndex = self.newIndex;
         self.newIndex--;
         
-        [[self.rightBox animator] replaceSubview:[self.viewControllers[self.oldIndex] view]
+        [[self.mainView animator] replaceSubview:[self.viewControllers[self.oldIndex] view]
                                             with:[self.viewControllers[self.newIndex] view]];
         
         [self viewChanged];
@@ -104,7 +103,7 @@
             for (NSViewController *controller in self.viewControllers) {
                 if ([controller isKindOfClass:[SourceViewController class]]) {
                     SourceViewController *sourceViewController = (SourceViewController *)controller;
-                    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@.%@", self.classModel.className, sourceViewController.extension] relativeToURL:panel.URLs.lastObject];
+                    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@.%@", self.model.className, sourceViewController.extension] relativeToURL:panel.URLs.lastObject];
                     [sourceViewController.string writeToURL:url atomically:YES encoding:NSUTF8StringEncoding error:NULL];
                 }
             }
@@ -116,7 +115,7 @@
         self.oldIndex = self.newIndex;
         self.newIndex++;
         
-        [[self.rightBox animator] replaceSubview:[self.viewControllers[self.oldIndex] view]
+        [[self.mainView animator] replaceSubview:[self.viewControllers[self.oldIndex] view]
                                             with:[self.viewControllers[self.newIndex] view]];
         
         [self viewChanged];
@@ -157,26 +156,6 @@
     } else {
         [self.btnNext setTitle:@"Next"];
     }
-}
-
-// NavigationDelegate methods
-- (ClassModel *)model
-{
-    return self.classModel;
-}
-
-- (void)canDoPrev:(BOOL)prev
-{
-    TraceLog();
-    
-    [self.btnPrev setEnabled:prev];
-}
-
-- (void)canDoNext:(BOOL)next
-{
-    TraceLog();
-    
-    [self.btnNext setEnabled:next];
 }
 
 @end

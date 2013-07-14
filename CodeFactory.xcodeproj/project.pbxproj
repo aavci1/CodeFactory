@@ -20,7 +20,7 @@
 		4238DE7E17872E5900100DA7 /* SaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238DE7717872E5900100DA7 /* SaveView.xib */; };
 		4238DE9917872EB800100DA7 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8D17872EB800100DA7 /* BackgroundView.m */; };
 		4238DE9A17872EB800100DA7 /* BoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8E17872EB800100DA7 /* BoxView.m */; };
-		4238DE9B17872EB800100DA7 /* ClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8F17872EB800100DA7 /* ClassModel.m */; };
+		4238DE9B17872EB800100DA7 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE8F17872EB800100DA7 /* Model.m */; };
 		4238DE9C17872EB800100DA7 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9017872EB800100DA7 /* ClassViewController.m */; };
 		4238DE9D17872EB800100DA7 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9117872EB800100DA7 /* DragView.m */; };
 		4238DE9F17872EB800100DA7 /* SourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238DE9317872EB800100DA7 /* SourceViewController.m */; };
@@ -61,11 +61,10 @@
 		4238DE7817872E5900100DA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SaveView.xib; sourceTree = "<group>"; };
 		4238DE7F17872EB800100DA7 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BackgroundView.h; path = src/BackgroundView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8017872EB800100DA7 /* BoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BoxView.h; path = src/BoxView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		4238DE8117872EB800100DA7 /* ClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ClassModel.h; path = src/ClassModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4238DE8117872EB800100DA7 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Model.h; path = src/Model.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8217872EB800100DA7 /* ClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ClassViewController.h; path = src/ClassViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8317872EB800100DA7 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DragView.h; path = src/DragView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8517872EB800100DA7 /* SourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SourceViewController.h; path = src/SourceViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		4238DE8617872EB800100DA7 /* NavigationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NavigationDelegate.h; path = src/NavigationDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "NSString+StringExtensions.h"; path = "src/NSString+StringExtensions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8817872EB800100DA7 /* PropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = PropertiesViewController.h; path = src/PropertiesViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8917872EB800100DA7 /* ProtocolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ProtocolsViewController.h; path = src/ProtocolsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -74,7 +73,7 @@
 		4238DE8C17872EB800100DA7 /* TraceLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TraceLog.h; path = src/TraceLog.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4238DE8D17872EB800100DA7 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BackgroundView.m; path = src/BackgroundView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4238DE8E17872EB800100DA7 /* BoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BoxView.m; path = src/BoxView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		4238DE8F17872EB800100DA7 /* ClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ClassModel.m; path = src/ClassModel.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4238DE8F17872EB800100DA7 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Model.m; path = src/Model.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4238DE9017872EB800100DA7 /* ClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ClassViewController.m; path = src/ClassViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4238DE9117872EB800100DA7 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DragView.m; path = src/DragView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4238DE9317872EB800100DA7 /* SourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SourceViewController.m; path = src/SourceViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -172,8 +171,8 @@
 				4238DE9117872EB800100DA7 /* DragView.m */,
 				4238DE8B17872EB800100DA7 /* StepView.h */,
 				4238DE9817872EB800100DA7 /* StepView.m */,
-				4238DE8117872EB800100DA7 /* ClassModel.h */,
-				4238DE8F17872EB800100DA7 /* ClassModel.m */,
+				4238DE8117872EB800100DA7 /* Model.h */,
+				4238DE8F17872EB800100DA7 /* Model.m */,
 				4238DE8217872EB800100DA7 /* ClassViewController.h */,
 				4238DE9017872EB800100DA7 /* ClassViewController.m */,
 				4238DE8917872EB800100DA7 /* ProtocolsViewController.h */,
@@ -184,7 +183,6 @@
 				4238DE9317872EB800100DA7 /* SourceViewController.m */,
 				4238DE8A17872EB800100DA7 /* SaveViewController.h */,
 				4238DE9717872EB800100DA7 /* SaveViewController.m */,
-				4238DE8617872EB800100DA7 /* NavigationDelegate.h */,
 				42E5CDEA179227E200870FC2 /* NSArray+Join.h */,
 				42E5CDEB179227E200870FC2 /* NSArray+Join.m */,
 				4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */,
@@ -320,7 +318,7 @@
 				4238DE5F17872CE800100DA7 /* AppDelegate.m in Sources */,
 				4238DE9917872EB800100DA7 /* BackgroundView.m in Sources */,
 				4238DE9A17872EB800100DA7 /* BoxView.m in Sources */,
-				4238DE9B17872EB800100DA7 /* ClassModel.m in Sources */,
+				4238DE9B17872EB800100DA7 /* Model.m in Sources */,
 				4238DE9C17872EB800100DA7 /* ClassViewController.m in Sources */,
 				4238DE9D17872EB800100DA7 /* DragView.m in Sources */,
 				4238DE9F17872EB800100DA7 /* SourceViewController.m in Sources */,

@@ -8,34 +8,35 @@
 
 #import "SaveViewController.h"
 
-#import "ClassModel.h"
+#import "Model.h"
 #import "TraceLog.h"
 
 @interface SaveViewController ()
+
+@property (strong, nonatomic) Model *model;
 
 @end
 
 @implementation SaveViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil model:(Model *)aModel
 {
     TraceLog();
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
-        _delegate = aDelegate;
+        _model = aModel;
     }
     
     return self;
 }
 
-- (void)validate
+- (BOOL)isValid
 {
     TraceLog();
     
-    [self.delegate canDoPrev:YES];
-    [self.delegate canDoNext:YES];
+    return YES;
 }
 
 - (NSString *)title
@@ -45,7 +46,7 @@
 
 - (NSString *)description
 {
-    return @"Save";
+    return @"Drag the icon below and drop into anywhere to save generated files. Alternatively you can use the Save button to choose where to save files.";
 }
 
 @end
