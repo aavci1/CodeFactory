@@ -19,9 +19,19 @@
 
 @interface AppDelegate ()
 
+// class model
 @property (strong, nonatomic) Model *model;
 
+// view controllers
+@property (strong, nonatomic) ClassViewController *classView;
+@property (strong, nonatomic) ProtocolsViewController *protocolsView;
+@property (strong, nonatomic) PropertiesViewController *propertiesView;
+@property (strong, nonatomic) SourceViewController *interfaceView;
+@property (strong, nonatomic) SourceViewController *implementationView;
+@property (strong, nonatomic) SaveViewController *saveView;
+
 @property (strong, nonatomic) NSArray *viewControllers;
+
 @property (nonatomic) NSUInteger oldIndex;
 @property (nonatomic) NSUInteger newIndex;
 
@@ -37,13 +47,21 @@
     self.model = [Model new];
     
     // create view controllers
+    self.classView = [[ClassViewController alloc] initWithNibName:@"ClassView" bundle:[NSBundle mainBundle] model:self.model];
+    self.protocolsView = [[ProtocolsViewController alloc] initWithNibName:@"ProtocolsView" bundle:[NSBundle mainBundle] model:self.model];
+    self.propertiesView = [[PropertiesViewController alloc] initWithNibName:@"PropertiesView" bundle:[NSBundle mainBundle] model:self.model];
+    self.interfaceView = [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] model:self.model extension:@"h"];
+    self.implementationView = [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] model:self.model extension:@"m"];
+    self.saveView = [[SaveViewController alloc] initWithNibName:@"SaveView" bundle:[NSBundle mainBundle] model:self.model];
+    
+    // create array
     self.viewControllers = @[
-                             [[ClassViewController alloc] initWithNibName:@"ClassView" bundle:[NSBundle mainBundle] model:self.model],
-                             [[ProtocolsViewController alloc] initWithNibName:@"ProtocolsView" bundle:[NSBundle mainBundle] model:self.model],
-                             [[PropertiesViewController alloc] initWithNibName:@"PropertiesView" bundle:[NSBundle mainBundle] model:self.model],
-                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] model:self.model extension:@"h"],
-                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] model:self.model extension:@"m"],
-                             [[SaveViewController alloc] initWithNibName:@"SaveView" bundle:[NSBundle mainBundle] model:self.model]
+                             self.classView,
+                             self.protocolsView,
+                             self.propertiesView,
+                             self.interfaceView,
+                             self.implementationView,
+                             self.saveView
                              ];
     
     // create steps
@@ -86,7 +104,19 @@
 {
     TraceLog();
     
-    if (self.newIndex == self.viewControllers.count - 1) {
+    if(![self.viewControllers[self.newIndex] isValid])
+        return;
+    
+    if (self.newIndex < self.viewControllers.count - 1)
+    {
+        self.oldIndex = self.newIndex;
+        self.newIndex++;
+        
+        [[self.mainView animator] replaceSubview:[self.viewControllers[self.oldIndex] view]
+                                            with:[self.viewControllers[self.newIndex] view]];
+        
+        [self viewChanged];
+    } else {
         // create open panel
         NSOpenPanel *panel = [NSOpenPanel openPanel];
         
@@ -100,25 +130,14 @@
             if (result == NSFileHandlingPanelCancelButton)
                 return;
             
-            for (NSViewController *controller in self.viewControllers) {
-                if ([controller isKindOfClass:[SourceViewController class]]) {
-                    SourceViewController *sourceViewController = (SourceViewController *)controller;
-                    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@.%@", self.model.className, sourceViewController.extension] relativeToURL:panel.URLs.lastObject];
-                    [sourceViewController.string writeToURL:url atomically:YES encoding:NSUTF8StringEncoding error:NULL];
-                }
-            }
+            // construct urls
+            NSURL *hURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@.h", self.model.className] relativeToURL:panel.URLs.lastObject];
+            NSURL *mURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@.m", self.model.className] relativeToURL:panel.URLs.lastObject];
+            
+            // save
+            [self.interfaceView.textView.string writeToURL:hURL atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+            [self.implementationView.textView.string writeToURL:mURL atomically:YES encoding:NSUTF8StringEncoding error:NULL];
         }];
-    }
-    
-    if (self.newIndex < self.viewControllers.count - 1)
-    {
-        self.oldIndex = self.newIndex;
-        self.newIndex++;
-        
-        [[self.mainView animator] replaceSubview:[self.viewControllers[self.oldIndex] view]
-                                            with:[self.viewControllers[self.newIndex] view]];
-        
-        [self viewChanged];
     }
 }
 
@@ -126,35 +145,36 @@
 {
     TraceLog();
     
-    self.stepView.currentStep = self.newIndex;
+    NSViewController *currentView = self.viewControllers[self.newIndex];
     
+    // update step view
+    [self.stepView setCurrentStep:self.newIndex];
     [self.stepView setNeedsDisplay:YES];
     
-    self.lblHeader.stringValue = [self.viewControllers[self.newIndex] title];
+    // update header
+    self.lblHeader.stringValue = [currentView title];
     
-    [self.viewControllers[self.newIndex] validate];
-    
-    if (self.newIndex == self.viewControllers.count - 1) {
-        [self.btnNext setTitle:@"Save"];
-        
-        NSString *interface, *implementation;
-        
-        for (NSViewController *controller in self.viewControllers) {
-            if ([controller isKindOfClass:[SourceViewController class]]) {
-                SourceViewController *sourceViewController = (SourceViewController *)controller;
-                if ([sourceViewController.extension isEqualToString:@"h"])
-                    interface = [sourceViewController string];
-                else
-                    implementation = [sourceViewController string];
-            }
-        }
-        
-        SaveViewController *saveViewController = self.viewControllers.lastObject;
-        saveViewController.dragView.className = self.model.className;
-        saveViewController.dragView.interface = interface;
-        saveViewController.dragView.implementation = implementation;
-    } else {
+    // update previous button
+    if (self.newIndex > 0)
+        [self.btnPrev setEnabled:YES];
+    else
+        [self.btnPrev setEnabled:NO];
+
+    // update next button
+    if (self.newIndex < self.viewControllers.count - 1)
         [self.btnNext setTitle:@"Next"];
+    else
+        [self.btnNext setTitle:@"Save"];
+    
+    // initialize current view
+    if (currentView == self.interfaceView) {
+        self.interfaceView.textView.string = [self.model interface];
+    } else if (currentView == self.implementationView) {
+        self.implementationView.textView.string = [self.model implementation];
+    } else if (currentView == self.saveView) {
+        self.saveView.dragView.className = self.model.className;
+        self.saveView.dragView.interface = self.interfaceView.textView.string;
+        self.saveView.dragView.implementation = self.implementationView.textView.string;
     }
 }
 

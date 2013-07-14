@@ -24,8 +24,6 @@
 - (NSString *)title;
 - (NSString *)description;
 
-- (NSString *)string;
-
 // outlets
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 

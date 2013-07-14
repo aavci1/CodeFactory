@@ -42,11 +42,6 @@
 {
     TraceLog();
     
-    if ([self.extension isEqualToString:@"h"])
-        self.textView.string = [self.model interface];
-    else
-        self.textView.string = [self.model implementation];
-    
     return YES;
 }
 
@@ -61,11 +56,6 @@
 - (NSString *)description
 {
     return @"Review generated source code. Any changes you make here will be preserved when you save.";
-}
-
-- (NSString *)string
-{
-    return self.textView.string;
 }
 
 @end
