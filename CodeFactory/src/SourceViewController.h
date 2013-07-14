@@ -10,7 +10,7 @@
 
 #import "NavigationDelegate.h"
 
-@interface InterfaceViewController : NSViewController
+@interface SourceViewController : NSViewController
 
 // properties
 @property (weak, nonatomic) id<NavigationDelegate> delegate;

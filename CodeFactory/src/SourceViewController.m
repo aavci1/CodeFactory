@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Abdurrahman AVCI. All rights reserved.
 //
 
-#import "InterfaceViewController.h"
+#import "SourceViewController.h"
 
 #import "ClassModel.h"
 #import "TraceLog.h"
 
-@interface InterfaceViewController ()
+@interface SourceViewController ()
 
 @end
 
-@implementation InterfaceViewController
+@implementation SourceViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id)aDelegate
 {

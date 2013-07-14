@@ -11,7 +11,7 @@
 #import "ClassViewController.h"
 #import "ProtocolsViewController.h"
 #import "PropertiesViewController.h"
-#import "InterfaceViewController.h"
+#import "SourceViewController.h"
 #import "ImplementationViewController.h"
 #import "SaveViewController.h"
 
@@ -43,7 +43,7 @@
                              [[ClassViewController alloc] initWithNibName:@"ClassView" bundle:[NSBundle mainBundle] delegate:self],
                              [[ProtocolsViewController alloc] initWithNibName:@"ProtocolsView" bundle:[NSBundle mainBundle] delegate:self],
                              [[PropertiesViewController alloc] initWithNibName:@"PropertiesView" bundle:[NSBundle mainBundle] delegate:self],
-                             [[InterfaceViewController alloc] initWithNibName:@"InterfaceView" bundle:[NSBundle mainBundle] delegate:self],
+                             [[SourceViewController alloc] initWithNibName:@"SourceView" bundle:[NSBundle mainBundle] delegate:self],
                              [[ImplementationViewController alloc] initWithNibName:@"ImplementationView" bundle:[NSBundle mainBundle] delegate:self],
                              [[SaveViewController alloc] initWithNibName:@"SaveView" bundle:[NSBundle mainBundle] delegate:self]
                              ];
@@ -103,8 +103,8 @@
                 return;
             
             for (NSViewController *controller in self.viewControllers) {
-                if ([controller isKindOfClass:[InterfaceViewController class]]) {
-                    InterfaceViewController *interfaceController = (InterfaceViewController *)controller;
+                if ([controller isKindOfClass:[SourceViewController class]]) {
+                    SourceViewController *interfaceController = (SourceViewController *)controller;
                     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@.h", self.classModel.className] relativeToURL:panel.URLs.lastObject];
                     [interfaceController.string writeToURL:url atomically:YES encoding:NSUTF8StringEncoding error:NULL];
                 }
@@ -147,8 +147,8 @@
         NSString *interface, *implementation;
         
         for (NSViewController *controller in self.viewControllers) {
-            if ([controller isKindOfClass:[InterfaceViewController class]])
-                interface = [(InterfaceViewController *)controller string];
+            if ([controller isKindOfClass:[SourceViewController class]])
+                interface = [(SourceViewController *)controller string];
             
             if ([controller isKindOfClass:[ImplementationViewController class]])
                 implementation = [(ImplementationViewController *)controller string];
