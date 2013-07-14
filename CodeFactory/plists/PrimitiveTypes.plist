@@ -2,12 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+    <string>id</string>
     <string>char</string>
-    <string>int</string>
     <string>short</string>
+    <string>int</string>
     <string>long</string>
+    <string>long long</string>
     <string>float</string>
     <string>double</string>
     <string>BOOL</string>
+    <string>NSInteger</string>
+    <string>NSUInteger</string>
 </array>
 </plist>
