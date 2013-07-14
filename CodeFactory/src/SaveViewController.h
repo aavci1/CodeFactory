@@ -23,7 +23,7 @@
 // methods
 - (void)validate;
 
-- (NSString *)name;
+- (NSString *)title;
 - (NSString *)description;
 
 // outlets

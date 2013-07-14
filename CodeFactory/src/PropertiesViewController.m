@@ -43,7 +43,7 @@
     [self.delegate canDoNext:YES];
 }
 
-- (NSString *)name
+- (NSString *)title
 {
     return @"Properties";
 }

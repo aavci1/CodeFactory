@@ -62,7 +62,7 @@
     [self.delegate canDoNext:next];
 }
 
-- (NSString *)name
+- (NSString *)title
 {
     return @"Class information";
 }

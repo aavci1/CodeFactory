@@ -50,7 +50,7 @@
     
     // create steps
     for (int i = 0; i < self.viewControllers.count; ++i)
-        [self.stepView addStep:[self.viewControllers[i] name]];
+        [self.stepView addStep:[self.viewControllers[i] title]];
 
     // init view indices
     self.oldIndex = 0;
@@ -137,7 +137,7 @@
     
     [self.stepView setNeedsDisplay:YES];
     
-    self.lblHeader.stringValue = [self.viewControllers[self.newIndex] name];
+    self.lblHeader.stringValue = [self.viewControllers[self.newIndex] title];
     
     [self.viewControllers[self.newIndex] validate];
     
