@@ -151,8 +151,9 @@
     [self.stepView setCurrentStep:self.newIndex];
     [self.stepView setNeedsDisplay:YES];
     
-    // update header
-    self.lblHeader.stringValue = [currentView title];
+    // update title and description
+    self.lblTitle.stringValue = [currentView title];
+    self.lblDescription.stringValue = [currentView description];
     
     // update previous button
     if (self.newIndex > 0)

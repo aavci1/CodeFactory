@@ -21,7 +21,8 @@
 
 @property (weak) IBOutlet NSButton *btnPrev;
 @property (weak) IBOutlet NSButton *btnNext;
-@property (weak) IBOutlet NSTextField *lblHeader;
+@property (weak) IBOutlet NSTextField *lblTitle;
+@property (weak) IBOutlet NSTextField *lblDescription;
 
 // actions
 - (IBAction)prevClicked:(id)sender;
