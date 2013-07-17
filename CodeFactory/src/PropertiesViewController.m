@@ -108,6 +108,9 @@
     
     NSInteger rowIndex = self.tableView.selectedRow;
     
+    // make table view first responder
+    [self.tableView.window makeFirstResponder:self.tableView];
+    
     // remove from table view
     [self.tableView beginUpdates];
     [self.tableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:rowIndex] withAnimation:NSTableViewAnimationEffectFade];
