@@ -206,6 +206,23 @@
     // implementation
     [source appendFormat:@"@implementation %@\n\n", self.className];
     
+    // implement description class
+    [source appendString:@"- (NSString *)description\n{\n"];
+    
+    if (self.properties.count <= 0) {
+        [source appendString:@"    return [NSString stringWithFormat:@\"<%@: %p>\", [self class], self];\n"];
+    } else {
+        [source appendString:@"    return [NSString stringWithFormat:@\"<%@: %p, %@>\", [self class], self,\n"];
+        [source appendString:@"            @{"];
+        [source appendFormat:@"\n                 @\"%@\": self.%@", [self.properties[0] name], [self.properties[0] name]];
+        
+        for (int i = 1; i < self.properties.count; ++i)
+            [source appendFormat:@",\n                 @\"%@\": self.%@", [self.properties[i] name], [self.properties[i] name]];
+        [source appendString:@"\n             }\n"];
+        [source appendString:@"            ];\n"];
+    }
+    [source appendString:@"}\n\n"];
+    
     // end
     [source appendString:@"@end\n"];
     
