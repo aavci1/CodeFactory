@@ -43,12 +43,12 @@
 
 - (NSString *)title
 {
-    return @"Protocols";
+    return @"Select Protocols";
 }
 
 - (NSString *)description
 {
-    return @"Add protocols";
+    return @"Enter the protocols you want to be addded to the interface declaration.";
 }
 
 - (IBAction)addClicked:(id)sender

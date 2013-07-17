@@ -74,12 +74,14 @@
 
 - (NSString *)title
 {
-    return @"Class information";
+    return @"Basic Information";
 }
 
 - (NSString *)description
 {
-    return @"Enter your class name and super class name";
+    return @"Class name and super class name must be valid identifiers, " \
+            "e.g they can only contain upper case or lower case letters, numbers or underscore. " \
+            "First character of the class name or super class name must be either a letter or underscore. ";
 }
 
 // text change notification

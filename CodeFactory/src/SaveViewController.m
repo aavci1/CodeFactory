@@ -46,7 +46,7 @@
 
 - (NSString *)description
 {
-    return @"Drag the icon below and drop into anywhere to save generated files. Alternatively you can use the Save button to choose where to save files.";
+    return @"Save generated files to disk by either using the Save button or dragging and dropping the icon below.";
 }
 
 @end

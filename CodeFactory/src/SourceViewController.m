@@ -48,14 +48,14 @@
 - (NSString *)title
 {
     if ([self.extension isEqualToString:@"h"])
-        return @"Header";
+        return @"Review Interface";
     
-    return @"Implementation";
+    return @"Review Implementation";
 }
 
 - (NSString *)description
 {
-    return @"Review generated source code. Any changes you make here will be preserved when you save.";
+    return @"You may edit the source code. Any changes you made will be preserved when saved to disk.";
 }
 
 @end

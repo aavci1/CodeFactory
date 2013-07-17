@@ -45,12 +45,12 @@
 
 - (NSString *)title
 {
-    return @"Properties";
+    return @"Add Properties";
 }
 
 - (NSString *)description
 {
-    return @"Add properties";
+    return @"Add properties to your class. You can add as many properties as you want. Property names must be valid identifiers.";
 }
 
 - (void)addProperty:(Property *)property
