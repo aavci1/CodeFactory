@@ -206,7 +206,18 @@
     // implementation
     [source appendFormat:@"@implementation %@\n\n", self.className];
     
-    // implement description class
+    // initializers
+    [source appendString:@"- (id)init\n"];
+    [source appendString:@"{\n"];
+    [source appendString:@"    self = [super init];\n\n"];
+    [source appendString:@"    if (self)\n"];
+    [source appendString:@"    {\n"];
+    [source appendString:@"        // TODO: initialize properties here\n"];
+    [source appendString:@"    }\n\n"];
+    [source appendString:@"    return self;\n"];
+    [source appendString:@"}\n\n"];
+    
+    // methods
     [source appendString:@"- (NSString *)description\n{\n"];
     
     if (self.properties.count <= 0) {
