@@ -146,16 +146,16 @@
 		4238DE5117872CE800100DA7 /* CodeFactory */ = {
 			isa = PBXGroup;
 			children = (
-				4238DE6817872DBE00100DA7 /* src */,
-				4238DE6A17872DD500100DA7 /* images */,
-				4238DE6B17872DDC00100DA7 /* plists */,
-				4238DE6C17872DFD00100DA7 /* ui */,
-				4238DEE217873B4400100DA7 /* other */,
+				4238DE6817872DBE00100DA7 /* Sources */,
+				4238DE6C17872DFD00100DA7 /* User Interface */,
+				4238DE6B17872DDC00100DA7 /* Property Lists */,
+				4238DE6A17872DD500100DA7 /* Images */,
+				4238DEE217873B4400100DA7 /* Supporting Files */,
 			);
 			path = CodeFactory;
 			sourceTree = "<group>";
 		};
-		4238DE6817872DBE00100DA7 /* src */ = {
+		4238DE6817872DBE00100DA7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				4238DE5717872CE800100DA7 /* main.m */,
@@ -188,10 +188,10 @@
 				4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */,
 				4238DE8C17872EB800100DA7 /* TraceLog.h */,
 			);
-			name = src;
+			name = Sources;
 			sourceTree = "<group>";
 		};
-		4238DE6A17872DD500100DA7 /* images */ = {
+		4238DE6A17872DD500100DA7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				42FA01F11788171F0062880E /* icons.icns */,
@@ -200,10 +200,10 @@
 				4238DEA717872EF300100DA7 /* dot-red.png */,
 				4238DEA817872EF300100DA7 /* duplicate.png */,
 			);
-			name = images;
+			name = Images;
 			sourceTree = "<group>";
 		};
-		4238DE6B17872DDC00100DA7 /* plists */ = {
+		4238DE6B17872DDC00100DA7 /* Property Lists */ = {
 			isa = PBXGroup;
 			children = (
 				4238DE5317872CE800100DA7 /* CodeFactory-Info.plist */,
@@ -211,10 +211,10 @@
 				4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */,
 				4238DEB117872F0B00100DA7 /* Protocols.plist */,
 			);
-			name = plists;
+			name = "Property Lists";
 			sourceTree = "<group>";
 		};
-		4238DE6C17872DFD00100DA7 /* ui */ = {
+		4238DE6C17872DFD00100DA7 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
 				4238DE6017872CE800100DA7 /* MainMenu.xib */,
@@ -224,17 +224,17 @@
 				4238DE7117872E5900100DA7 /* SourceView.xib */,
 				4238DE7717872E5900100DA7 /* SaveView.xib */,
 			);
-			name = ui;
+			name = "User Interface";
 			sourceTree = "<group>";
 		};
-		4238DEE217873B4400100DA7 /* other */ = {
+		4238DEE217873B4400100DA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				4238DEE117873B2100100DA7 /* CodeFactory.entitlements */,
 				4238DE5417872CE800100DA7 /* InfoPlist.strings */,
 				4238DE5A17872CE800100DA7 /* Credits.rtf */,
 			);
-			name = other;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
