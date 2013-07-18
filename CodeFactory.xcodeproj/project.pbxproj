@@ -92,7 +92,7 @@
 		4238DEE117873B2100100DA7 /* CodeFactory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CodeFactory.entitlements; sourceTree = "<group>"; };
 		42E5CDEA179227E200870FC2 /* NSArray+Join.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Join.h"; path = "src/NSArray+Join.h"; sourceTree = "<group>"; };
 		42E5CDEB179227E200870FC2 /* NSArray+Join.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Join.m"; path = "src/NSArray+Join.m"; sourceTree = "<group>"; };
-		42FA01F11788171F0062880E /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
+		42FA01F11788171F0062880E /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icons.icns; path = ../icons.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 		4238DE3F17872CE800100DA7 = {
 			isa = PBXGroup;
 			children = (
-				42FA01F11788171F0062880E /* icons.icns */,
 				4238DE5117872CE800100DA7 /* CodeFactory */,
 				4238DE4A17872CE800100DA7 /* Frameworks */,
 				4238DE4917872CE800100DA7 /* Products */,
@@ -195,6 +194,7 @@
 		4238DE6A17872DD500100DA7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				42FA01F11788171F0062880E /* icons.icns */,
 				4238DEA517872EF300100DA7 /* dot-green.png */,
 				4238DEA617872EF300100DA7 /* dot-orange.png */,
 				4238DEA717872EF300100DA7 /* dot-red.png */,
