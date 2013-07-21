@@ -26,7 +26,6 @@
 @property (strong, nonatomic) NSString *superName;
 @property (strong, nonatomic) NSMutableArray *protocols;
 @property (strong, nonatomic) NSMutableArray *properties;
-@property (strong, nonatomic) NSMutableArray *methods;
 
 - (NSString *)interface;
 - (NSString *)implementation;

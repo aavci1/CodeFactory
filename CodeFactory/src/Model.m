@@ -93,7 +93,6 @@
         _superName = @"";
         _protocols = [NSMutableArray new];
         _properties = [NSMutableArray new];
-        _methods = [NSMutableArray new];
     }
     
     return self;
