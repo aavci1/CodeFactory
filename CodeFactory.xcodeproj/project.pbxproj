@@ -36,6 +36,10 @@
 		4238DEB217872F0B00100DA7 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEAF17872F0B00100DA7 /* Classes.plist */; };
 		4238DEB317872F0B00100DA7 /* PrimitiveTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */; };
 		4238DEB417872F0B00100DA7 /* Protocols.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4238DEB117872F0B00100DA7 /* Protocols.plist */; };
+		4240A9B6179C9151009F4E7D /* MyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9B5179C9151009F4E7D /* MyProperty.m */; };
+		4240A9B9179C931C009F4E7D /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9B8179C931C009F4E7D /* MyClass.m */; };
+		4240A9BC179C94F8009F4E7D /* MyMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9BB179C94F8009F4E7D /* MyMethod.m */; };
+		4240A9BF179C969B009F4E7D /* MyInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9BE179C969B009F4E7D /* MyInitializer.m */; };
 		42E5CDEC179227E200870FC2 /* NSArray+Join.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E5CDEB179227E200870FC2 /* NSArray+Join.m */; };
 		42FA01F21788171F0062880E /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42FA01F11788171F0062880E /* icons.icns */; };
 /* End PBXBuildFile section */
@@ -90,6 +94,14 @@
 		4238DEB017872F0B00100DA7 /* PrimitiveTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrimitiveTypes.plist; path = plists/PrimitiveTypes.plist; sourceTree = "<group>"; };
 		4238DEB117872F0B00100DA7 /* Protocols.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Protocols.plist; path = plists/Protocols.plist; sourceTree = "<group>"; };
 		4238DEE117873B2100100DA7 /* CodeFactory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CodeFactory.entitlements; sourceTree = "<group>"; };
+		4240A9B4179C9151009F4E7D /* MyProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyProperty.h; path = src/MyProperty.h; sourceTree = "<group>"; };
+		4240A9B5179C9151009F4E7D /* MyProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyProperty.m; path = src/MyProperty.m; sourceTree = "<group>"; };
+		4240A9B7179C931C009F4E7D /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyClass.h; path = src/MyClass.h; sourceTree = "<group>"; };
+		4240A9B8179C931C009F4E7D /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyClass.m; path = src/MyClass.m; sourceTree = "<group>"; };
+		4240A9BA179C94F8009F4E7D /* MyMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMethod.h; path = src/MyMethod.h; sourceTree = "<group>"; };
+		4240A9BB179C94F8009F4E7D /* MyMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMethod.m; path = src/MyMethod.m; sourceTree = "<group>"; };
+		4240A9BD179C969B009F4E7D /* MyInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyInitializer.h; path = src/MyInitializer.h; sourceTree = "<group>"; };
+		4240A9BE179C969B009F4E7D /* MyInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyInitializer.m; path = src/MyInitializer.m; sourceTree = "<group>"; };
 		42E5CDEA179227E200870FC2 /* NSArray+Join.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Join.h"; path = "src/NSArray+Join.h"; sourceTree = "<group>"; };
 		42E5CDEB179227E200870FC2 /* NSArray+Join.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Join.m"; path = "src/NSArray+Join.m"; sourceTree = "<group>"; };
 		42FA01F11788171F0062880E /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icons.icns; path = ../icons.icns; sourceTree = "<group>"; };
@@ -146,6 +158,7 @@
 		4238DE5117872CE800100DA7 /* CodeFactory */ = {
 			isa = PBXGroup;
 			children = (
+				4240A9B3179C9124009F4E7D /* Models */,
 				4238DE6817872DBE00100DA7 /* Sources */,
 				4238DE6C17872DFD00100DA7 /* User Interface */,
 				4238DE6B17872DDC00100DA7 /* Property Lists */,
@@ -235,6 +248,21 @@
 				4238DE5A17872CE800100DA7 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4240A9B3179C9124009F4E7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4240A9B4179C9151009F4E7D /* MyProperty.h */,
+				4240A9B5179C9151009F4E7D /* MyProperty.m */,
+				4240A9B7179C931C009F4E7D /* MyClass.h */,
+				4240A9B8179C931C009F4E7D /* MyClass.m */,
+				4240A9BA179C94F8009F4E7D /* MyMethod.h */,
+				4240A9BB179C94F8009F4E7D /* MyMethod.m */,
+				4240A9BD179C969B009F4E7D /* MyInitializer.h */,
+				4240A9BE179C969B009F4E7D /* MyInitializer.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +356,10 @@
 				4238DEA317872EB800100DA7 /* SaveViewController.m in Sources */,
 				4238DEA417872EB800100DA7 /* StepView.m in Sources */,
 				42E5CDEC179227E200870FC2 /* NSArray+Join.m in Sources */,
+				4240A9B6179C9151009F4E7D /* MyProperty.m in Sources */,
+				4240A9B9179C931C009F4E7D /* MyClass.m in Sources */,
+				4240A9BC179C94F8009F4E7D /* MyMethod.m in Sources */,
+				4240A9BF179C969B009F4E7D /* MyInitializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
