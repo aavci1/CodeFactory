@@ -40,6 +40,7 @@
 		4240A9B9179C931C009F4E7D /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9B8179C931C009F4E7D /* MyClass.m */; };
 		4240A9BC179C94F8009F4E7D /* MyMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9BB179C94F8009F4E7D /* MyMethod.m */; };
 		4240A9BF179C969B009F4E7D /* MyInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9BE179C969B009F4E7D /* MyInitializer.m */; };
+		4240A9C2179CAE88009F4E7D /* CodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4240A9C1179CAE88009F4E7D /* CodeGenerator.m */; };
 		42E5CDEC179227E200870FC2 /* NSArray+Join.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E5CDEB179227E200870FC2 /* NSArray+Join.m */; };
 		42FA01F21788171F0062880E /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 42FA01F11788171F0062880E /* icons.icns */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,8 @@
 		4240A9BB179C94F8009F4E7D /* MyMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMethod.m; path = src/MyMethod.m; sourceTree = "<group>"; };
 		4240A9BD179C969B009F4E7D /* MyInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyInitializer.h; path = src/MyInitializer.h; sourceTree = "<group>"; };
 		4240A9BE179C969B009F4E7D /* MyInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyInitializer.m; path = src/MyInitializer.m; sourceTree = "<group>"; };
+		4240A9C0179CAE88009F4E7D /* CodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeGenerator.h; path = src/CodeGenerator.h; sourceTree = "<group>"; };
+		4240A9C1179CAE88009F4E7D /* CodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodeGenerator.m; path = src/CodeGenerator.m; sourceTree = "<group>"; };
 		42E5CDEA179227E200870FC2 /* NSArray+Join.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Join.h"; path = "src/NSArray+Join.h"; sourceTree = "<group>"; };
 		42E5CDEB179227E200870FC2 /* NSArray+Join.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Join.m"; path = "src/NSArray+Join.m"; sourceTree = "<group>"; };
 		42FA01F11788171F0062880E /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icons.icns; path = ../icons.icns; sourceTree = "<group>"; };
@@ -183,8 +186,6 @@
 				4238DE9117872EB800100DA7 /* DragView.m */,
 				4238DE8B17872EB800100DA7 /* StepView.h */,
 				4238DE9817872EB800100DA7 /* StepView.m */,
-				4238DE8117872EB800100DA7 /* Model.h */,
-				4238DE8F17872EB800100DA7 /* Model.m */,
 				4238DE8217872EB800100DA7 /* ClassViewController.h */,
 				4238DE9017872EB800100DA7 /* ClassViewController.m */,
 				4238DE8917872EB800100DA7 /* ProtocolsViewController.h */,
@@ -195,11 +196,6 @@
 				4238DE9317872EB800100DA7 /* SourceViewController.m */,
 				4238DE8A17872EB800100DA7 /* SaveViewController.h */,
 				4238DE9717872EB800100DA7 /* SaveViewController.m */,
-				42E5CDEA179227E200870FC2 /* NSArray+Join.h */,
-				42E5CDEB179227E200870FC2 /* NSArray+Join.m */,
-				4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */,
-				4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */,
-				4238DE8C17872EB800100DA7 /* TraceLog.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -253,14 +249,23 @@
 		4240A9B3179C9124009F4E7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4240A9B4179C9151009F4E7D /* MyProperty.h */,
-				4240A9B5179C9151009F4E7D /* MyProperty.m */,
 				4240A9B7179C931C009F4E7D /* MyClass.h */,
 				4240A9B8179C931C009F4E7D /* MyClass.m */,
+				4240A9B4179C9151009F4E7D /* MyProperty.h */,
+				4240A9B5179C9151009F4E7D /* MyProperty.m */,
 				4240A9BA179C94F8009F4E7D /* MyMethod.h */,
 				4240A9BB179C94F8009F4E7D /* MyMethod.m */,
 				4240A9BD179C969B009F4E7D /* MyInitializer.h */,
 				4240A9BE179C969B009F4E7D /* MyInitializer.m */,
+				4240A9C0179CAE88009F4E7D /* CodeGenerator.h */,
+				4240A9C1179CAE88009F4E7D /* CodeGenerator.m */,
+				4238DE8117872EB800100DA7 /* Model.h */,
+				4238DE8F17872EB800100DA7 /* Model.m */,
+				42E5CDEA179227E200870FC2 /* NSArray+Join.h */,
+				42E5CDEB179227E200870FC2 /* NSArray+Join.m */,
+				4238DE8717872EB800100DA7 /* NSString+StringExtensions.h */,
+				4238DE9417872EB800100DA7 /* NSString+StringExtensions.m */,
+				4238DE8C17872EB800100DA7 /* TraceLog.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				4240A9B9179C931C009F4E7D /* MyClass.m in Sources */,
 				4240A9BC179C94F8009F4E7D /* MyMethod.m in Sources */,
 				4240A9BF179C969B009F4E7D /* MyInitializer.m in Sources */,
+				4240A9C2179CAE88009F4E7D /* CodeGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
