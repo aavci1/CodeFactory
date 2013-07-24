@@ -12,8 +12,6 @@
 
 @interface CodeGenerator : NSObject
 
-+ (NSString *)fileHeader:(NSDictionary *)params;
-
 + (NSString *)interface:(MyClass *)aClass;
 + (NSString *)implementation:(MyClass *)aClass;
 

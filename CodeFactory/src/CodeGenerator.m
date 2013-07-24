@@ -16,7 +16,7 @@
 
 @implementation CodeGenerator
 
-+ (NSString *)fileHeader:(NSDictionary *)params
++ (NSMutableString *)header:(NSDictionary *)params
 {
     TraceLog();
     
@@ -37,11 +37,40 @@
     return source;
 }
 
-+ (NSString *)interface:(MyClass *)aClass
++ (NSString *)interface:(MyClass *)aClass 
 {
     TraceLog();
     
+    NSString *projectName = @"";
+    NSString *fileName = @"";
+    
+    // get user name
+    NSString *userName = NSFullUserName();
+    
+    // create date formatter
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    
+    // get date string
+    NSString *date = [formatter stringFromDate:[NSDate date]];
+
+    // get year component
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:[NSDate date]];
+    
+    // convert to number
+    NSString *year = [NSString stringWithFormat:@"%li", (long)[components year]];
+    
+    NSDictionary *params = @{
+                             @"${ProjectName}": projectName,
+                             @"${UserName}": userName,
+                             @"${FileName}": fileName,
+                             @"${Date}": date,
+                             @"${Year}": year
+                             };
+    
     NSMutableString *source = [NSMutableString new];
+    
+    [source appendString:[self header:params]];
     
     return source;
 }
